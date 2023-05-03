@@ -4,12 +4,11 @@ import getCityKey from "../getCityKey";
 
 //mock fetch fn
 
-const expectedResult: UnparsedCityLocation = {
+const expectedResult: UnparsedCityLocation[] = [{
     Key: "KEY",
     Country: {EnglishName: "Argentina"},
     AdministrativeArea: {EnglishName: "Santa Fe"},
-    ParentCity: {EnglishName: "Santa Fe"},
-} 
+}] 
    describe("getCityKey", () => {
     test.skip("should have been called with a valid cityQuery", async () => {
         const cityQuery = "New York";
@@ -17,11 +16,10 @@ const expectedResult: UnparsedCityLocation = {
     });
     test.skip("Returns an object containing UnparsedCityLocation if requested cityQuery is valid", async () => {
         const cityQuery = "New York";
-        const expectedResult: UnparsedCityLocation = await getCityKey(cityQuery);
+        const expectedResult: UnparsedCityLocation[] = await getCityKey(cityQuery);
         expect(expectedResult).toHaveProperty("Key");
         expect(expectedResult).toHaveProperty("Country");
         expect(expectedResult).toHaveProperty("AdministrativeArea");
-        expect(expectedResult).toHaveProperty("ParentCity");
     });
    })
    

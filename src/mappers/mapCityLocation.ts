@@ -1,8 +1,8 @@
 import { UnparsedCityLocation, ParsedCityLocation } from "../types/cityKey";
-export default function mapCityLocation(apiData : UnparsedCityLocation): ParsedCityLocation{
-    const key = apiData.Key;
-    const country = apiData.Country.EnglishName
-    const administrativeArea = apiData.AdministrativeArea.EnglishName
-    const parentCity = apiData.ParentCity.EnglishName
-return {key, country, administrativeArea, parentCity}
+export default function mapCityLocation(apiData : UnparsedCityLocation[]): ParsedCityLocation{
+    const data = apiData[0];
+    const key = data.Key;
+    const country = data.Country.EnglishName
+    const administrativeArea = data.AdministrativeArea.EnglishName
+return {key, country, administrativeArea}
 }
