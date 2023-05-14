@@ -6,19 +6,20 @@ export default function useCityLocation(){
     const [loading, setLoading] = useState(false);
     const [cityLocation, setCityLocation] = useState<ParsedCityLocation>({key: "",country: "", administrativeArea: ""});
     const [cityFetch, setCityFetch] = useState("");
-
     useEffect( () =>{
         async function fetchCity() {
-            setCityLocation(mapCityLocation(await getCityKey(cityFetch)));
+            const cityKey = await getCityKey(cityFetch);
+            const mappedCity = mapCityLocation(cityKey);
+            setCityLocation(mappedCity);
             setLoading(false);
         }
         if(cityFetch){
             setLoading(true);
             fetchCity();
         }
-    }, [cityFetch])
+    }, [cityFetch]);
     
-return {loading, cityLocation, setCityFetch}
+return {loading, cityLocation, setCityFetch};
 }
 
 

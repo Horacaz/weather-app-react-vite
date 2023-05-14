@@ -7,19 +7,14 @@ function App() {
   return (
     <>
       <h1>Hello World</h1>
-      <label>
-      City Location Search
-      <input onChange = {(event) => setQuery(event.target.value)}type='text'/>
+      <label>City Location Search
+        {/* add validation beforehand */}
+        <input onChange = {(event) => setQuery(event.target.value)}type='text'/>
       </label>
-      <button onClick={() => {
-      setCityFetch(query)
-      }}type="button">Fetch City</button>
-      {!loading && <>
-        <p>{cityLocation.key}</p>
-        <p>{cityLocation.country}</p>
-        <p>{cityLocation.administrativeArea}</p>
-        </>
-        }
+      <button onClick={() => {setCityFetch(query)}}type="button">Fetch City</button>
+  {!loading && 
+  <h2>{cityLocation.administrativeArea}</h2>
+  }
     </>
   )
 }
