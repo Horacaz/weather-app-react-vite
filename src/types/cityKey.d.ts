@@ -1,10 +1,10 @@
-export interface UnparsedCityLocation {
+export interface IUnparsedCityLocation {
     Key: string;
     Country: {EnglishName: string};
     AdministrativeArea: {EnglishName: string};
 }
 
-export interface ParsedCityLocation {
+export interface IParsedCityLocation {
     key: string;
     country: string;
     administrativeArea: string;

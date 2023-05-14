@@ -1,19 +1,18 @@
-export interface UnparsedCurrentForecast {
+export interface IUnparsedCurrentForecast {
     WeatherText: string,
     Temperature: {
         Metric: {Value: number},
     },
     LocalObservationDateTime: string,
-
 }
 
-export interface ParsedCurrentForecast {
+export interface IParsedCurrentForecast {
     weatherDescription: string,
     temperature: number,
     time: string,
 }
 
-export interface UnparsedDailyForecast{
+export interface IUnparsedDailyForecast{
     Date: string,
     Temperature: {
         Minimum: {Value: number},
@@ -44,19 +43,14 @@ export interface UnparsedDailyForecast{
             Speed: { Value: number},
             Direction: {English: string}
         },
-        WindGust: {
-            Speed: { Value: number},
-            Direction: {English: string}
-        }
     }
-
 }
-export interface ParsedDailyForecast{
+export interface IParsedDailyForecast{
     date: string,
     temperature: {
         min: number, 
         max: number},
-    realTemperature: {
+    realFeelTemperature: {
         min: number, 
         max: number},
     day: {
@@ -73,7 +67,7 @@ export interface ParsedDailyForecast{
             speed: number, 
             direction: string}},
 }
-export interface UnparsedTwelveHoursForecast{
+export interface IUnparsedTwelveHoursForecast{
     DateTime: string,
     IconPhrase: string,
     Temperature: {
@@ -81,17 +75,16 @@ export interface UnparsedTwelveHoursForecast{
     },
     PrecipitationProbability: number,
 }
-export interface ParsedTwelveHoursForecast{
+export interface IParsedTwelveHoursForecast{
     date: string,
     weatherDescription: string,
     temperature: number,
     precipitation: number,
 }
 
-
-export interface UnparsedExtendedForecast{
-    DailyForeCasts: UnparsedDailyForecast[],
+export interface IUnparsedExtendedForecast{
+    DailyForecasts: IUnparsedDailyForecast[],
 }
-export interface ParsedExtendedForecast{
-    extendedForecast: ParsedDailyForecast[],
+export interface IParsedExtendedForecast{
+    extendedForecast: IParsedDailyForecast[],
 }

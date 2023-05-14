@@ -1,4 +1,4 @@
-import {UnparsedCurrentForecast} from '../types/currentForecast';
+import {IUnparsedCurrentForecast} from '../types/Forecast';
 
 /* 
 
@@ -29,7 +29,7 @@ WHERE THE INPUT IS LCOATE? HUH?
 
 const API_KEY = 'GCs4Stk98mbGy2ESMGZ5naQMcAcABC3X';
 const locationKey = "1-11221_1_AL";
-async function getCurrentForecast(locationKey: string): Promise<UnparsedCurrentForecast[]>{
+async function getCurrentForecast(locationKey: string): Promise<IUnparsedCurrentForecast[]>{
     const url =  `https://dataservice.accuweather.com/currentconditions/v1/${locationKey}?apikey=${API_KEY}&details=false`;
     const result = await fetch(url).then(res => res.json()).then(data => data);
     return result;
@@ -57,3 +57,7 @@ export const promesas = Promise.all(
         getOneDayForecast(locationKey), 
         getFiveDaysForecast(locationKey)]).
         then((values) => console.log(values));
+
+        //I got an idea, use all these functions individually, then map those values INDIVIDUALLY. Create 
+        // custom hook called useForecast and use a promise somehow to retrieve all these values ready to be rendered;
+        // maybe we should not use Promise.all;
