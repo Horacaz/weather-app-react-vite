@@ -1,9 +1,13 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css'
 import useCityLocation from './hooks/useCityLocation';
+import { promesas } from './services/getCurrentForecast';
 function App() {  
   const {loading, cityLocation, setCityFetch} = useCityLocation();
   const [query, setQuery] = useState("");
+  useEffect(() => {
+    console.log(promesas)
+  }, []);
   return (
     <>
       <h1>Hello World</h1>

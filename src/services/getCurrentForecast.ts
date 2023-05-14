@@ -28,22 +28,32 @@ WHERE THE INPUT IS LCOATE? HUH?
 
 
 const API_KEY = 'GCs4Stk98mbGy2ESMGZ5naQMcAcABC3X';
-export async function getCurrentForecast(locationKey: string): Promise<UnparsedCurrentForecast[]>{
-const params = new URLSearchParams({apiKey: API_KEY, q: locationKey});
-const url =  `https://dataservice.accuweather.com/currentconditions/v1/${params}&details=false`;
-const result = await fetch(url).then(res => res.json()).then(data => data);
-return result;
+const locationKey = "1-11221_1_AL";
+async function getCurrentForecast(locationKey: string): Promise<UnparsedCurrentForecast[]>{
+    const url =  `https://dataservice.accuweather.com/currentconditions/v1/${locationKey}?apikey=${API_KEY}&details=false`;
+    const result = await fetch(url).then(res => res.json()).then(data => data);
+    return result;
+}
+async function getTwelveHoursForecast(locationKey: string){
+    const url = `https://dataservice.accuweather.com/forecasts/v1/hourly/12hour/${locationKey}?apikey=${API_KEY}&details=false&metric=true`
+    const result = await fetch(url).then(res => res.json()).then(data => data);
+    return result;
 }
 
-export async function getTwelveHoursForecast(){
-
+async function getOneDayForecast(locationKey: string){
+    const url = `https://dataservice.accuweather.com/forecasts/v1/daily/1day/${locationKey}?apikey=${API_KEY}&details=false&metric=true`
+    const result = await fetch(url).then(res => res.json()).then(data => data);
+    return result;
 }
 
-export async function getOneDayForecast(){
-
+async function getFiveDaysForecast(locationKey: string){
+    const url = `https://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationKey}?apikey=${API_KEY}&details=false&metric=true`
+    const result = await fetch(url).then(res => res.json()).then(data => data);
+    return result;
 }
-
-export async function getFiveDaysForecast(){
-
-}
-
+export const promesas = Promise.all(
+    [getCurrentForecast(locationKey), 
+        getTwelveHoursForecast(locationKey), 
+        getOneDayForecast(locationKey), 
+        getFiveDaysForecast(locationKey)]).
+        then((values) => console.log(values));
