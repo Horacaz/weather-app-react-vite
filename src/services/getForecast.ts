@@ -28,36 +28,25 @@ WHERE THE INPUT IS LCOATE? HUH?
 
 
 const API_KEY = 'GCs4Stk98mbGy2ESMGZ5naQMcAcABC3X';
-const locationKey = "1-11221_1_AL";
-async function getCurrentForecast(locationKey: string): Promise<IUnparsedCurrentForecast[]>{
-    const url =  `https://dataservice.accuweather.com/currentconditions/v1/${locationKey}?apikey=${API_KEY}&details=false`;
+export async function getCurrentForecast(locationKey: string): Promise<IUnparsedCurrentForecast[]>{
+    const url =  `https://dataservice.accuweather.com/currentconditions/v1/${locationKey}?apikey=${API_KEY}&details=true`;
     const result = await fetch(url).then(res => res.json()).then(data => data);
     return result;
 }
-async function getTwelveHoursForecast(locationKey: string){
-    const url = `https://dataservice.accuweather.com/forecasts/v1/hourly/12hour/${locationKey}?apikey=${API_KEY}&details=false&metric=true`
-    const result = await fetch(url).then(res => res.json()).then(data => data);
-    return result;
-}
-
-async function getOneDayForecast(locationKey: string){
-    const url = `https://dataservice.accuweather.com/forecasts/v1/daily/1day/${locationKey}?apikey=${API_KEY}&details=false&metric=true`
+export async function getTwelveHoursForecast(locationKey: string){
+    const url = `https://dataservice.accuweather.com/forecasts/v1/hourly/12hour/${locationKey}?apikey=${API_KEY}&details=true&metric=true`
     const result = await fetch(url).then(res => res.json()).then(data => data);
     return result;
 }
 
-async function getFiveDaysForecast(locationKey: string){
-    const url = `https://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationKey}?apikey=${API_KEY}&details=false&metric=true`
+export async function getOneDayForecast(locationKey: string){
+    const url = `https://dataservice.accuweather.com/forecasts/v1/daily/1day/${locationKey}?apikey=${API_KEY}&details=true&metric=true`
     const result = await fetch(url).then(res => res.json()).then(data => data);
     return result;
 }
-export const promesas = Promise.all(
-    [getCurrentForecast(locationKey), 
-        getTwelveHoursForecast(locationKey), 
-        getOneDayForecast(locationKey), 
-        getFiveDaysForecast(locationKey)]).
-        then((values) => console.log(values));
 
-        //I got an idea, use all these functions individually, then map those values INDIVIDUALLY. Create 
-        // custom hook called useForecast and use a promise somehow to retrieve all these values ready to be rendered;
-        // maybe we should not use Promise.all;
+export async function getFiveDaysForecast(locationKey: string){
+    const url = `https://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationKey}?apikey=${API_KEY}&details=true&metric=true`
+    const result = await fetch(url).then(res => res.json()).then(data => data);
+    return result;
+}
