@@ -1,5 +1,5 @@
 import { IParsedTwelveHoursForecast, IUnparsedTwelveHoursForecast } from "../types/Forecast";
-export function mapTwelveHoursForecast(apiData: IUnparsedTwelveHoursForecast[]): IParsedTwelveHoursForecast[]{
+export default function mapTwelveHoursForecast(apiData: IUnparsedTwelveHoursForecast[]): IParsedTwelveHoursForecast[]{
 
     const twelveHoursForecast = apiData.map( forecast => ({
         date: forecast.DateTime,

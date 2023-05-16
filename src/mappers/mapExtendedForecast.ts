@@ -1,26 +1,26 @@
-import { IUnparsedExtendedForecast, IParsedExtendedForecast } from "../types/Forecast";
+import {IParsedExtendedForecast, IUnparsedDailyForecast } from "../types/Forecast";
 
-export function mapExtendedForecast(apiData: IUnparsedExtendedForecast): IParsedExtendedForecast{
-const extendedForecast = apiData.DailyForecasts.map(forecast => ({
-    date: forecast.Date,
-    temperature: {min: forecast.Temperature.Minimum.Value, max: forecast.Temperature.Maximum.Value},
-    realFeelTemperature: {min: forecast.RealFeelTemperature.Minimum.Value, max: forecast.RealFeelTemperature.Maximum.Value},
-    day: {
-        forecast: forecast.Day.LongPhrase,
-        precipitation: forecast.Day.PrecipitationProbability,
-        wind: {
-            speed: forecast.Day.Wind.Speed.Value,
-            direction: forecast.Day.Wind.Direction.English
+export default function mapExtendedForecast(apiData: IUnparsedDailyForecast): IParsedExtendedForecast{
+    const extendedForecast = apiData.DailyForecasts.map(forecast => ({
+        date: forecast.Date,
+        temperature: {min: forecast.Temperature.Minimum.Value, max: forecast.Temperature.Maximum.Value},
+        realFeelTemperature: {min: forecast.RealFeelTemperature.Minimum.Value, max: forecast.RealFeelTemperature.Maximum.Value},
+        day: {
+            forecast: forecast.Day.LongPhrase,
+            precipitation: forecast.Day.PrecipitationProbability,
+            wind: {
+                speed: forecast.Day.Wind.Speed.Value,
+                direction: forecast.Day.Wind.Direction.English
+            }
+        },
+        night: {
+            forecast: forecast.Night.LongPhrase,
+            precipitation: forecast.Night.PrecipitationProbability,
+            wind: {
+                speed: forecast.Night.Wind.Speed.Value,
+                direction: forecast.Night.Wind.Direction.English
+            }
         }
-    },
-    night: {
-        forecast: forecast.Night.LongPhrase,
-        precipitation: forecast.Night.PrecipitationProbability,
-        wind: {
-            speed: forecast.Night.Wind.Speed.Value,
-            direction: forecast.Night.Wind.Direction.English
-        }
-    }
-}));
-return {extendedForecast}
+    }));
+return {extendedForecast};
 }
