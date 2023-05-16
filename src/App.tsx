@@ -4,7 +4,7 @@ import useCityLocation from './hooks/useCityLocation';
 import useForecast from './hooks/useForecast';
 function App() {  
   const {loading, cityLocation, cityKey, setCityFetch} = useCityLocation();
-  const {currentForecast,extendedForecast, dailyForecast, twelveHoursForecast, setKey} = useForecast();
+  const {currentForecast, extendedForecast, dailyForecast, twelveHoursForecast, setKey} = useForecast();
   const [query, setQuery] = useState("");
   return (
     <>
@@ -17,7 +17,7 @@ function App() {
   {!loading && <>
   <h2>{cityLocation.administrativeArea}</h2>
   <button onClick={() => {setKey(cityKey)}}>Get Forecast</button>
-  <button onClick={() => {console.log(currentForecast,extendedForecast, dailyForecast, twelveHoursForecast)}}>Log Forecasts</button>
+  <button onClick={() => {console.log(extendedForecast)}}>Log Forecasts</button>
   </>
   }
   </>

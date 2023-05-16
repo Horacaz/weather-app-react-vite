@@ -1,6 +1,6 @@
-import {IParsedExtendedForecast, IUnparsedDailyForecast } from "../types/Forecast";
+import {IUnparsedDailyForecast, IParsedDailyForecast} from "../types/Forecast";
 
-export default function mapExtendedForecast(apiData: IUnparsedDailyForecast): IParsedExtendedForecast{
+export default function mapExtendedForecast(apiData: IUnparsedDailyForecast): IParsedDailyForecast[]{
     const extendedForecast = apiData.DailyForecasts.map(forecast => ({
         date: forecast.Date,
         temperature: {min: forecast.Temperature.Minimum.Value, max: forecast.Temperature.Maximum.Value},
@@ -22,5 +22,5 @@ export default function mapExtendedForecast(apiData: IUnparsedDailyForecast): IP
             }
         }
     }));
-return {extendedForecast};
+return extendedForecast;
 }

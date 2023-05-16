@@ -86,6 +86,3 @@ export interface IParsedTwelveHoursForecast{
     temperature: number,
     precipitation: number,
 }
-export interface IParsedExtendedForecast{
-    extendedForecast: IParsedDailyForecast[],
-}

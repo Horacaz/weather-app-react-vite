@@ -1,14 +1,14 @@
 import { describe, expect, test } from 'vitest'
-import { UnparsedCityLocation, ParsedCityLocation } from "../../types/cityKey";
+import { IUnparsedCityLocation, IParsedCityLocation } from "../../types/cityKey";
 import mapCityLocation from "../mapCityLocation";
 
-const apiDataMock: UnparsedCityLocation[] = [{
+const apiDataMock: IUnparsedCityLocation[] = [{
     Key: "L11150",
     Country: { EnglishName: "Argentina" },
     AdministrativeArea: { EnglishName: "Santa Fe" },
 }];
 
-const expectedOutput: ParsedCityLocation =  {
+const expectedOutput: IParsedCityLocation =  {
     key: "L11150", country: "Argentina", administrativeArea: "Santa Fe"
 }
 describe('mapCityLocation', () =>{
