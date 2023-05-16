@@ -1,18 +1,14 @@
 import { describe, expect, test } from 'vitest'
-import { IUnparsedCityLocation, IParsedCityLocation } from "../../types/cityKey";
+import { IParsedCityLocation } from "../../types/cityKey";
+import cityLocationMock from '../../../fixtures/cityLocation.json';
 import mapCityLocation from "../mapCityLocation";
 
-const apiDataMock: IUnparsedCityLocation[] = [{
-    Key: "L11150",
-    Country: { EnglishName: "Argentina" },
-    AdministrativeArea: { EnglishName: "Santa Fe" },
-}];
-
+const cityLocationFixture = cityLocationMock;
 const expectedOutput: IParsedCityLocation =  {
-    key: "L11150", country: "Argentina", administrativeArea: "Santa Fe"
+    key: "1-11221_1_AL", country: "Argentina", administrativeArea: "Santa Fe"
 }
 describe('mapCityLocation', () =>{
     test("Returns a ParsedCityLocation object when valid parameters are passed on", () => {
-        expect(mapCityLocation(apiDataMock)).toEqual(expectedOutput);
+        expect(mapCityLocation(cityLocationFixture)).toEqual(expectedOutput);
     });
 })
