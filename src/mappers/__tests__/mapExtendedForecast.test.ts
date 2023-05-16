@@ -1,25 +1,25 @@
-import { describe, expect, test } from 'vitest'
+import { describe, expect, test } from "vitest";
 import { IParsedDailyForecast } from "../../types/Forecast";
-import extendedForecastMock from '../../../fixtures/extendedForecast.json';
-import mapExtendedForecast from '../mapExtendedForecast';
+import extendedForecastMock from "../../../fixtures/extendedForecast.json";
+import mapExtendedForecast from "../mapExtendedForecast";
 
 const extendedForecastFixture = extendedForecastMock;
-const expectedExtendedForecast: IParsedDailyForecast[] =[
+const expectedExtendedForecast: IParsedDailyForecast[] = [
   {
-    date: '2023-05-16T07:00:00-03:00',
+    date: "2023-05-16T07:00:00-03:00",
     day: {
-      forecast: 'Mostly sunny and very warm',
+      forecast: "Mostly sunny and very warm",
       precipitation: 0,
       wind: {
-        direction: 'NNE',
+        direction: "NNE",
         speed: 16.7,
       },
     },
     night: {
-      forecast: 'Patchy clouds',
+      forecast: "Patchy clouds",
       precipitation: 0,
       wind: {
-        direction: 'NNE',
+        direction: "NNE",
         speed: 14.8,
       },
     },
@@ -33,20 +33,20 @@ const expectedExtendedForecast: IParsedDailyForecast[] =[
     },
   },
   {
-    date: '2023-05-17T07:00:00-03:00',
+    date: "2023-05-17T07:00:00-03:00",
     day: {
-      forecast: 'Mostly sunny and remaining warm',
+      forecast: "Mostly sunny and remaining warm",
       precipitation: 2,
       wind: {
-        direction: 'NNE',
+        direction: "NNE",
         speed: 16.7,
       },
     },
     night: {
-      forecast: 'Patchy clouds and mild',
+      forecast: "Patchy clouds and mild",
       precipitation: 25,
       wind: {
-        direction: 'NNW',
+        direction: "NNW",
         speed: 11.1,
       },
     },
@@ -60,20 +60,20 @@ const expectedExtendedForecast: IParsedDailyForecast[] =[
     },
   },
   {
-    date: '2023-05-18T07:00:00-03:00',
+    date: "2023-05-18T07:00:00-03:00",
     day: {
-      forecast: 'Nice with plenty of sunshine',
+      forecast: "Nice with plenty of sunshine",
       precipitation: 1,
       wind: {
-        direction: 'SSW',
+        direction: "SSW",
         speed: 11.1,
       },
     },
     night: {
-      forecast: 'Partly cloudy and mild',
+      forecast: "Partly cloudy and mild",
       precipitation: 12,
       wind: {
-        direction: 'E',
+        direction: "E",
         speed: 9.3,
       },
     },
@@ -87,20 +87,20 @@ const expectedExtendedForecast: IParsedDailyForecast[] =[
     },
   },
   {
-    date: '2023-05-19T07:00:00-03:00',
+    date: "2023-05-19T07:00:00-03:00",
     day: {
-      forecast: 'Cloudy with a passing shower in the afternoon',
+      forecast: "Cloudy with a passing shower in the afternoon",
       precipitation: 59,
       wind: {
-        direction: 'NW',
+        direction: "NW",
         speed: 11.1,
       },
     },
     night: {
-      forecast: 'Low clouds with a shower in spots late',
+      forecast: "Low clouds with a shower in spots late",
       precipitation: 45,
       wind: {
-        direction: 'S',
+        direction: "S",
         speed: 13,
       },
     },
@@ -114,20 +114,21 @@ const expectedExtendedForecast: IParsedDailyForecast[] =[
     },
   },
   {
-    date: '2023-05-20T07:00:00-03:00',
+    date: "2023-05-20T07:00:00-03:00",
     day: {
-      forecast: 'Cloudy; occasional rain and drizzle in the morning followed by a shower in spots in the afternoon',
+      forecast:
+        "Cloudy; occasional rain and drizzle in the morning followed by a shower in spots in the afternoon",
       precipitation: 63,
       wind: {
-        direction: 'SE',
+        direction: "SE",
         speed: 14.8,
       },
     },
     night: {
-      forecast: 'Showers in the evening; otherwise, mostly cloudy',
+      forecast: "Showers in the evening; otherwise, mostly cloudy",
       precipitation: 65,
       wind: {
-        direction: 'E',
+        direction: "E",
         speed: 11.1,
       },
     },
@@ -142,8 +143,10 @@ const expectedExtendedForecast: IParsedDailyForecast[] =[
   },
 ];
 
-describe('mapExtendedForecast', () =>{
-        test("Returns a ParsedExtendedForecast object when valid parameters are passed on", () => {
-        expect(mapExtendedForecast(extendedForecastFixture)).toEqual(expectedExtendedForecast);
-    });
-})
+describe("mapExtendedForecast", () => {
+  test("Returns a ParsedExtendedForecast object when valid parameters are passed on", () => {
+    expect(mapExtendedForecast(extendedForecastFixture)).toEqual(
+      expectedExtendedForecast
+    );
+  });
+});
