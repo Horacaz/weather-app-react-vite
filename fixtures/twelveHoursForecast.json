@@ -1,0 +1,194 @@
+[
+    {
+        "DateTime": "2023-05-16T12:00:00-03:00",
+        "EpochDateTime": 1684249200,
+        "WeatherIcon": 1,
+        "IconPhrase": "Sunny",
+        "HasPrecipitation": false,
+        "IsDaylight": true,
+        "Temperature": {
+            "Value": 23.0,
+            "Unit": "C",
+            "UnitType": 17
+        },
+        "PrecipitationProbability": 0,
+        "MobileLink": "http://www.accuweather.com/en/ar/santa-fe/11221/hourly-weather-forecast/11221?day=1&hbhhour=12&unit=c&lang=en-us",
+        "Link": "http://www.accuweather.com/en/ar/santa-fe/11221/hourly-weather-forecast/11221?day=1&hbhhour=12&unit=c&lang=en-us"
+    },
+    {
+        "DateTime": "2023-05-16T13:00:00-03:00",
+        "EpochDateTime": 1684252800,
+        "WeatherIcon": 1,
+        "IconPhrase": "Sunny",
+        "HasPrecipitation": false,
+        "IsDaylight": true,
+        "Temperature": {
+            "Value": 24.9,
+            "Unit": "C",
+            "UnitType": 17
+        },
+        "PrecipitationProbability": 0,
+        "MobileLink": "http://www.accuweather.com/en/ar/santa-fe/11221/hourly-weather-forecast/11221?day=1&hbhhour=13&unit=c&lang=en-us",
+        "Link": "http://www.accuweather.com/en/ar/santa-fe/11221/hourly-weather-forecast/11221?day=1&hbhhour=13&unit=c&lang=en-us"
+    },
+    {
+        "DateTime": "2023-05-16T14:00:00-03:00",
+        "EpochDateTime": 1684256400,
+        "WeatherIcon": 1,
+        "IconPhrase": "Sunny",
+        "HasPrecipitation": false,
+        "IsDaylight": true,
+        "Temperature": {
+            "Value": 26.4,
+            "Unit": "C",
+            "UnitType": 17
+        },
+        "PrecipitationProbability": 0,
+        "MobileLink": "http://www.accuweather.com/en/ar/santa-fe/11221/hourly-weather-forecast/11221?day=1&hbhhour=14&unit=c&lang=en-us",
+        "Link": "http://www.accuweather.com/en/ar/santa-fe/11221/hourly-weather-forecast/11221?day=1&hbhhour=14&unit=c&lang=en-us"
+    },
+    {
+        "DateTime": "2023-05-16T15:00:00-03:00",
+        "EpochDateTime": 1684260000,
+        "WeatherIcon": 1,
+        "IconPhrase": "Sunny",
+        "HasPrecipitation": false,
+        "IsDaylight": true,
+        "Temperature": {
+            "Value": 27.2,
+            "Unit": "C",
+            "UnitType": 17
+        },
+        "PrecipitationProbability": 0,
+        "MobileLink": "http://www.accuweather.com/en/ar/santa-fe/11221/hourly-weather-forecast/11221?day=1&hbhhour=15&unit=c&lang=en-us",
+        "Link": "http://www.accuweather.com/en/ar/santa-fe/11221/hourly-weather-forecast/11221?day=1&hbhhour=15&unit=c&lang=en-us"
+    },
+    {
+        "DateTime": "2023-05-16T16:00:00-03:00",
+        "EpochDateTime": 1684263600,
+        "WeatherIcon": 3,
+        "IconPhrase": "Partly sunny",
+        "HasPrecipitation": false,
+        "IsDaylight": true,
+        "Temperature": {
+            "Value": 26.9,
+            "Unit": "C",
+            "UnitType": 17
+        },
+        "PrecipitationProbability": 0,
+        "MobileLink": "http://www.accuweather.com/en/ar/santa-fe/11221/hourly-weather-forecast/11221?day=1&hbhhour=16&unit=c&lang=en-us",
+        "Link": "http://www.accuweather.com/en/ar/santa-fe/11221/hourly-weather-forecast/11221?day=1&hbhhour=16&unit=c&lang=en-us"
+    },
+    {
+        "DateTime": "2023-05-16T17:00:00-03:00",
+        "EpochDateTime": 1684267200,
+        "WeatherIcon": 4,
+        "IconPhrase": "Intermittent clouds",
+        "HasPrecipitation": false,
+        "IsDaylight": true,
+        "Temperature": {
+            "Value": 26.0,
+            "Unit": "C",
+            "UnitType": 17
+        },
+        "PrecipitationProbability": 0,
+        "MobileLink": "http://www.accuweather.com/en/ar/santa-fe/11221/hourly-weather-forecast/11221?day=1&hbhhour=17&unit=c&lang=en-us",
+        "Link": "http://www.accuweather.com/en/ar/santa-fe/11221/hourly-weather-forecast/11221?day=1&hbhhour=17&unit=c&lang=en-us"
+    },
+    {
+        "DateTime": "2023-05-16T18:00:00-03:00",
+        "EpochDateTime": 1684270800,
+        "WeatherIcon": 7,
+        "IconPhrase": "Cloudy",
+        "HasPrecipitation": false,
+        "IsDaylight": true,
+        "Temperature": {
+            "Value": 24.2,
+            "Unit": "C",
+            "UnitType": 17
+        },
+        "PrecipitationProbability": 0,
+        "MobileLink": "http://www.accuweather.com/en/ar/santa-fe/11221/hourly-weather-forecast/11221?day=1&hbhhour=18&unit=c&lang=en-us",
+        "Link": "http://www.accuweather.com/en/ar/santa-fe/11221/hourly-weather-forecast/11221?day=1&hbhhour=18&unit=c&lang=en-us"
+    },
+    {
+        "DateTime": "2023-05-16T19:00:00-03:00",
+        "EpochDateTime": 1684274400,
+        "WeatherIcon": 38,
+        "IconPhrase": "Mostly cloudy",
+        "HasPrecipitation": false,
+        "IsDaylight": false,
+        "Temperature": {
+            "Value": 22.7,
+            "Unit": "C",
+            "UnitType": 17
+        },
+        "PrecipitationProbability": 0,
+        "MobileLink": "http://www.accuweather.com/en/ar/santa-fe/11221/hourly-weather-forecast/11221?day=1&hbhhour=19&unit=c&lang=en-us",
+        "Link": "http://www.accuweather.com/en/ar/santa-fe/11221/hourly-weather-forecast/11221?day=1&hbhhour=19&unit=c&lang=en-us"
+    },
+    {
+        "DateTime": "2023-05-16T20:00:00-03:00",
+        "EpochDateTime": 1684278000,
+        "WeatherIcon": 38,
+        "IconPhrase": "Mostly cloudy",
+        "HasPrecipitation": false,
+        "IsDaylight": false,
+        "Temperature": {
+            "Value": 21.3,
+            "Unit": "C",
+            "UnitType": 17
+        },
+        "PrecipitationProbability": 0,
+        "MobileLink": "http://www.accuweather.com/en/ar/santa-fe/11221/hourly-weather-forecast/11221?day=1&hbhhour=20&unit=c&lang=en-us",
+        "Link": "http://www.accuweather.com/en/ar/santa-fe/11221/hourly-weather-forecast/11221?day=1&hbhhour=20&unit=c&lang=en-us"
+    },
+    {
+        "DateTime": "2023-05-16T21:00:00-03:00",
+        "EpochDateTime": 1684281600,
+        "WeatherIcon": 38,
+        "IconPhrase": "Mostly cloudy",
+        "HasPrecipitation": false,
+        "IsDaylight": false,
+        "Temperature": {
+            "Value": 20.1,
+            "Unit": "C",
+            "UnitType": 17
+        },
+        "PrecipitationProbability": 0,
+        "MobileLink": "http://www.accuweather.com/en/ar/santa-fe/11221/hourly-weather-forecast/11221?day=1&hbhhour=21&unit=c&lang=en-us",
+        "Link": "http://www.accuweather.com/en/ar/santa-fe/11221/hourly-weather-forecast/11221?day=1&hbhhour=21&unit=c&lang=en-us"
+    },
+    {
+        "DateTime": "2023-05-16T22:00:00-03:00",
+        "EpochDateTime": 1684285200,
+        "WeatherIcon": 38,
+        "IconPhrase": "Mostly cloudy",
+        "HasPrecipitation": false,
+        "IsDaylight": false,
+        "Temperature": {
+            "Value": 19.6,
+            "Unit": "C",
+            "UnitType": 17
+        },
+        "PrecipitationProbability": 0,
+        "MobileLink": "http://www.accuweather.com/en/ar/santa-fe/11221/hourly-weather-forecast/11221?day=1&hbhhour=22&unit=c&lang=en-us",
+        "Link": "http://www.accuweather.com/en/ar/santa-fe/11221/hourly-weather-forecast/11221?day=1&hbhhour=22&unit=c&lang=en-us"
+    },
+    {
+        "DateTime": "2023-05-16T23:00:00-03:00",
+        "EpochDateTime": 1684288800,
+        "WeatherIcon": 38,
+        "IconPhrase": "Mostly cloudy",
+        "HasPrecipitation": false,
+        "IsDaylight": false,
+        "Temperature": {
+            "Value": 19.2,
+            "Unit": "C",
+            "UnitType": 17
+        },
+        "PrecipitationProbability": 0,
+        "MobileLink": "http://www.accuweather.com/en/ar/santa-fe/11221/hourly-weather-forecast/11221?day=1&hbhhour=23&unit=c&lang=en-us",
+        "Link": "http://www.accuweather.com/en/ar/santa-fe/11221/hourly-weather-forecast/11221?day=1&hbhhour=23&unit=c&lang=en-us"
+    }
+]

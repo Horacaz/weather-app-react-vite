@@ -1,0 +1,25 @@
+[
+    {
+        "LocalObservationDateTime": "2023-05-16T11:20:00-03:00",
+        "EpochTime": 1684246800,
+        "WeatherText": "Sunny",
+        "WeatherIcon": 1,
+        "HasPrecipitation": false,
+        "PrecipitationType": null,
+        "IsDayTime": true,
+        "Temperature": {
+            "Metric": {
+                "Value": 20.9,
+                "Unit": "C",
+                "UnitType": 17
+            },
+            "Imperial": {
+                "Value": 70.0,
+                "Unit": "F",
+                "UnitType": 18
+            }
+        },
+        "MobileLink": "http://www.accuweather.com/en/ar/santa-fe/11221/current-weather/11221?lang=en-us",
+        "Link": "http://www.accuweather.com/en/ar/santa-fe/11221/current-weather/11221?lang=en-us"
+    }
+]

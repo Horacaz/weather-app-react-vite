@@ -1,0 +1,272 @@
+{
+    "Headline": {
+        "EffectiveDate": "2023-05-19T13:00:00-03:00",
+        "EffectiveEpochDate": 1684512000,
+        "Severity": 5,
+        "Text": "Expect showers Friday afternoon",
+        "Category": "rain",
+        "EndDate": "2023-05-19T19:00:00-03:00",
+        "EndEpochDate": 1684533600,
+        "MobileLink": "http://www.accuweather.com/en/ar/santa-fe/11221/daily-weather-forecast/11221?unit=c&lang=en-us",
+        "Link": "http://www.accuweather.com/en/ar/santa-fe/11221/daily-weather-forecast/11221?unit=c&lang=en-us"
+    },
+    "DailyForecasts": [
+        {
+            "Date": "2023-05-16T07:00:00-03:00",
+            "EpochDate": 1684231200,
+            "Sun": {
+                "Rise": "2023-05-16T07:44:00-03:00",
+                "EpochRise": 1684233840,
+                "Set": "2023-05-16T18:14:00-03:00",
+                "EpochSet": 1684271640
+            },
+            "Moon": {
+                "Rise": "2023-05-16T04:30:00-03:00",
+                "EpochRise": 1684222200,
+                "Set": "2023-05-16T16:25:00-03:00",
+                "EpochSet": 1684265100,
+                "Phase": "WaningCrescent",
+                "Age": 26
+            },
+            "Temperature": {
+                "Minimum": {
+                    "Value": 13.8,
+                    "Unit": "C",
+                    "UnitType": 17
+                },
+                "Maximum": {
+                    "Value": 27.2,
+                    "Unit": "C",
+                    "UnitType": 17
+                }
+            },
+            "RealFeelTemperature": {
+                "Minimum": {
+                    "Value": 12.9,
+                    "Unit": "C",
+                    "UnitType": 17,
+                    "Phrase": "Cool"
+                },
+                "Maximum": {
+                    "Value": 26.4,
+                    "Unit": "C",
+                    "UnitType": 17,
+                    "Phrase": "Pleasant"
+                }
+            },
+            "RealFeelTemperatureShade": {
+                "Minimum": {
+                    "Value": 12.9,
+                    "Unit": "C",
+                    "UnitType": 17,
+                    "Phrase": "Cool"
+                },
+                "Maximum": {
+                    "Value": 25.2,
+                    "Unit": "C",
+                    "UnitType": 17,
+                    "Phrase": "Pleasant"
+                }
+            },
+            "HoursOfSun": 9.6,
+            "DegreeDaySummary": {
+                "Heating": {
+                    "Value": 0.0,
+                    "Unit": "C",
+                    "UnitType": 17
+                },
+                "Cooling": {
+                    "Value": 3.0,
+                    "Unit": "C",
+                    "UnitType": 17
+                }
+            },
+            "AirAndPollen": [
+                {
+                    "Name": "AirQuality",
+                    "Value": 0,
+                    "Category": "Good",
+                    "CategoryValue": 1,
+                    "Type": "Ozone"
+                },
+                {
+                    "Name": "Grass",
+                    "Value": 0,
+                    "Category": "Low",
+                    "CategoryValue": 1
+                },
+                {
+                    "Name": "Mold",
+                    "Value": 0,
+                    "Category": "Low",
+                    "CategoryValue": 1
+                },
+                {
+                    "Name": "Ragweed",
+                    "Value": 0,
+                    "Category": "Low",
+                    "CategoryValue": 1
+                },
+                {
+                    "Name": "Tree",
+                    "Value": 0,
+                    "Category": "Low",
+                    "CategoryValue": 1
+                },
+                {
+                    "Name": "UVIndex",
+                    "Value": 4,
+                    "Category": "Moderate",
+                    "CategoryValue": 2
+                }
+            ],
+            "Day": {
+                "Icon": 2,
+                "IconPhrase": "Mostly sunny",
+                "HasPrecipitation": false,
+                "ShortPhrase": "Mostly sunny and very warm",
+                "LongPhrase": "Mostly sunny and very warm",
+                "PrecipitationProbability": 0,
+                "ThunderstormProbability": 0,
+                "RainProbability": 0,
+                "SnowProbability": 0,
+                "IceProbability": 0,
+                "Wind": {
+                    "Speed": {
+                        "Value": 16.7,
+                        "Unit": "km/h",
+                        "UnitType": 7
+                    },
+                    "Direction": {
+                        "Degrees": 25,
+                        "Localized": "NNE",
+                        "English": "NNE"
+                    }
+                },
+                "WindGust": {
+                    "Speed": {
+                        "Value": 37.0,
+                        "Unit": "km/h",
+                        "UnitType": 7
+                    },
+                    "Direction": {
+                        "Degrees": 20,
+                        "Localized": "NNE",
+                        "English": "NNE"
+                    }
+                },
+                "TotalLiquid": {
+                    "Value": 0.0,
+                    "Unit": "mm",
+                    "UnitType": 3
+                },
+                "Rain": {
+                    "Value": 0.0,
+                    "Unit": "mm",
+                    "UnitType": 3
+                },
+                "Snow": {
+                    "Value": 0.0,
+                    "Unit": "cm",
+                    "UnitType": 4
+                },
+                "Ice": {
+                    "Value": 0.0,
+                    "Unit": "mm",
+                    "UnitType": 3
+                },
+                "HoursOfPrecipitation": 0.0,
+                "HoursOfRain": 0.0,
+                "HoursOfSnow": 0.0,
+                "HoursOfIce": 0.0,
+                "CloudCover": 15,
+                "Evapotranspiration": {
+                    "Value": 3.0,
+                    "Unit": "mm",
+                    "UnitType": 3
+                },
+                "SolarIrradiance": {
+                    "Value": 4622.1,
+                    "Unit": "W/m²",
+                    "UnitType": 33
+                }
+            },
+            "Night": {
+                "Icon": 35,
+                "IconPhrase": "Partly cloudy",
+                "HasPrecipitation": false,
+                "ShortPhrase": "Patchy clouds",
+                "LongPhrase": "Patchy clouds",
+                "PrecipitationProbability": 0,
+                "ThunderstormProbability": 0,
+                "RainProbability": 0,
+                "SnowProbability": 0,
+                "IceProbability": 0,
+                "Wind": {
+                    "Speed": {
+                        "Value": 14.8,
+                        "Unit": "km/h",
+                        "UnitType": 7
+                    },
+                    "Direction": {
+                        "Degrees": 33,
+                        "Localized": "NNE",
+                        "English": "NNE"
+                    }
+                },
+                "WindGust": {
+                    "Speed": {
+                        "Value": 35.2,
+                        "Unit": "km/h",
+                        "UnitType": 7
+                    },
+                    "Direction": {
+                        "Degrees": 43,
+                        "Localized": "NE",
+                        "English": "NE"
+                    }
+                },
+                "TotalLiquid": {
+                    "Value": 0.0,
+                    "Unit": "mm",
+                    "UnitType": 3
+                },
+                "Rain": {
+                    "Value": 0.0,
+                    "Unit": "mm",
+                    "UnitType": 3
+                },
+                "Snow": {
+                    "Value": 0.0,
+                    "Unit": "cm",
+                    "UnitType": 4
+                },
+                "Ice": {
+                    "Value": 0.0,
+                    "Unit": "mm",
+                    "UnitType": 3
+                },
+                "HoursOfPrecipitation": 0.0,
+                "HoursOfRain": 0.0,
+                "HoursOfSnow": 0.0,
+                "HoursOfIce": 0.0,
+                "CloudCover": 51,
+                "Evapotranspiration": {
+                    "Value": 0.8,
+                    "Unit": "mm",
+                    "UnitType": 3
+                },
+                "SolarIrradiance": {
+                    "Value": 0.0,
+                    "Unit": "W/m²",
+                    "UnitType": 33
+                }
+            },
+            "Sources": [
+                "AccuWeather"
+            ],
+            "MobileLink": "http://www.accuweather.com/en/ar/santa-fe/11221/daily-weather-forecast/11221?day=1&unit=c&lang=en-us",
+            "Link": "http://www.accuweather.com/en/ar/santa-fe/11221/daily-weather-forecast/11221?day=1&unit=c&lang=en-us"
+        }
+    ]
+}
