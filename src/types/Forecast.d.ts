@@ -13,59 +13,64 @@ export interface IParsedCurrentForecast {
 }
 
 export interface IUnparsedDailyForecast{
-    Date: string,
-    Temperature: {
-        Minimum: {Value: number},
-        Maximum: {Value: number},
-    },
-    RealFeelTemperature: {
-        Minimum: {Value: number, 
-            Phrase: string},
-        Maximum: {Value: number, 
-            Phrase: string},
-    },
-    Day: {
-        LongPhrase: string,
-        PrecipitationProbability: number,
-        Wind: {
-            Speed: { Value: number},
-            Direction: {English: string}
+    DailyForecasts: {
+        Date: string,
+        Temperature: {
+            Minimum: {Value: number},
+            Maximum: {Value: number},
         },
-        WindGust: {
-            Speed: { Value: number},
-            Direction: {English: string}
+        RealFeelTemperature: {
+            Minimum: {Value: number, 
+                Phrase: string},
+            Maximum: {Value: number, 
+                Phrase: string},
+        },
+        Day: {
+            LongPhrase: string,
+            PrecipitationProbability: number,
+            Wind: {
+                Speed: { Value: number},
+                Direction: {English: string}
+            },
+            WindGust: {
+                Speed: { Value: number},
+                Direction: {English: string}
+            }
+        },
+        Night: {
+            LongPhrase: string,
+            PrecipitationProbability: number,
+            Wind: {
+                Speed: { Value: number},
+                Direction: {English: string}
+            },
         }
-    },
-    Night: {
-        LongPhrase: string,
-        PrecipitationProbability: number,
-        Wind: {
-            Speed: { Value: number},
-            Direction: {English: string}
-        },
-    }
+    }[];
 }
 export interface IParsedDailyForecast{
-    date: string,
-    temperature: {
-        min: number, 
-        max: number},
-    realFeelTemperature: {
-        min: number, 
-        max: number},
-    day: {
-        forecast: string, 
-        precipitation: number, 
-        wind: {
-            speed: number, 
-            direction: string}
+        date: string,
+        temperature: {
+            min: number, 
+            max: number
         },
-    night: {
-        forecast: string, 
-        precipitation: number, 
-        wind: {
-            speed: number, 
-            direction: string}},
+        realFeelTemperature: {
+            min: number, 
+            max: number
+        },
+        day: {
+            forecast: string, 
+            precipitation: number, 
+            wind: {
+                speed: number, 
+                direction: string}
+        },
+        night: {
+            forecast: string, 
+            precipitation: number, 
+            wind: {
+                speed: number, 
+                direction: string}
+        },
 }
 export interface IUnparsedTwelveHoursForecast{
     DateTime: string,
@@ -80,10 +85,6 @@ export interface IParsedTwelveHoursForecast{
     weatherDescription: string,
     temperature: number,
     precipitation: number,
-}
-
-export interface IUnparsedExtendedForecast{
-    DailyForecasts: IUnparsedDailyForecast[],
 }
 export interface IParsedExtendedForecast{
     extendedForecast: IParsedDailyForecast[],
