@@ -2,20 +2,15 @@ import { useState } from "react";
 import "./App.css";
 import useCityLocation from "./hooks/useCityLocation";
 import useForecast from "./hooks/useForecast";
-import CurrentForecast from "./components/CurrentForecast/CurrentForecast";
+import SearchLocation from "./components/SearchLocation/SearchLocation";
 function App() {
   const { loading, cityLocation, cityKey, setCityFetch } = useCityLocation();
-  const {
-    currentForecast,
-    extendedForecast,
-    dailyForecast,
-    twelveHoursForecast,
-    setKey,
-  } = useForecast();
+  const {currentForecast, setKey} = useForecast();
   const [query, setQuery] = useState("");
   return (
     <>
-      <h1>Hello World</h1>
+      <h1>Weather in your Location</h1>
+      <SearchLocation />
       <label>
         City Location Search
         {/* add validation beforehand */}
@@ -39,14 +34,6 @@ function App() {
           >
             Get Forecast
           </button>
-          <button
-            onClick={() => {
-              console.log(extendedForecast);
-            }}
-          >
-            Log Forecasts
-          </button>
-          <CurrentForecast />
         </>
       )}
     </>
