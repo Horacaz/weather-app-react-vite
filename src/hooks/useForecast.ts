@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import {
   IParsedCurrentForecast,
   IParsedDailyForecast,
-  IParsedExtendedForecast,
   IParsedTwelveHoursForecast,
 } from "../types/Forecast";
 import mapCurrentForecast from "../mappers/mapCurrentForecast";
@@ -15,14 +14,14 @@ import {
   getFiveDaysForecast,
   getOneDayForecast,
   getTwelveHoursForecast,
-} from "../services/getForecast";
+} from "../api/getForecast";
 
 export default function useForecast() {
   const [locationKey, setKey] = useState<string | null>(null);
   const [currentForecast, setCurrentForecast] =
     useState<IParsedCurrentForecast | null>(null);
   const [extendedForecast, setExtendedForecast] =
-    useState<IParsedExtendedForecast | null>(null);
+    useState<IParsedDailyForecast[] | null>(null);
   const [dailyForecast, setDailyForecast] =
     useState<IParsedDailyForecast | null>(null);
   const [twelveHoursForecast, setTwelveHoursForecast] = useState<
