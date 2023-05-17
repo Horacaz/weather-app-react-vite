@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import useCityLocation from "./hooks/useCityLocation";
 import useForecast from "./hooks/useForecast";
+import CurrentForecast from "./components/CurrentForecast/CurrentForecast";
 function App() {
   const { loading, cityLocation, cityKey, setCityFetch } = useCityLocation();
   const {
@@ -45,6 +46,7 @@ function App() {
           >
             Log Forecasts
           </button>
+          <CurrentForecast />
         </>
       )}
     </>
