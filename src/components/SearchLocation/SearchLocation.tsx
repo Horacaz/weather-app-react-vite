@@ -1,11 +1,15 @@
-import { SearchInput, Label } from "./styles";
+import { SearchInput, Label, Button, Container } from "./styles";
 
-export default function SearchLocation(){
+export default function SearchLocation(props){
+    const {onChange, onClick} = props;
     return(
         <>
-        <Label> Search Location
-         <SearchInput onChange = { (event) => console.log(event.target.value)}/>
-        </Label>
+        <Container>
+            <Label> Search Location
+                <SearchInput onChange={onChange}/>
+            </Label>
+            <Button onClick={onClick}> Fetch City</Button>
+        </Container>
         </>
     )
 }
