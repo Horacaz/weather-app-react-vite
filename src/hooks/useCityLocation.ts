@@ -1,5 +1,5 @@
 import { IParsedCityLocation } from "../types/cityKey";
-import getCityKey from "../services/getCityKey";
+import getCityKey from "../api/getCityKey";
 import mapCityLocation from "../mappers/mapCityLocation";
 import { useEffect, useState } from "react";
 export default function useCityLocation() {
