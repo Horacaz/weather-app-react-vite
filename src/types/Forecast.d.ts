@@ -8,10 +8,10 @@ export interface IUnparsedCurrentForecast {
   RealFeelTemperature: {
     Metric: { Value: number}
   };
-  RelativeHumidty: number;
+  RelativeHumidity: number;
   Wind: {
     Direction: {
-      Degrees: string;
+      Degrees: number;
     },
     Speed: { 
       Metric: {
@@ -33,7 +33,7 @@ export interface IParsedCurrentForecast {
   realTemperature: number;
   humidity: number;
   wind: {
-    direction: string,
+    direction: number,
     speed: number,
   };
   pressure: number;

@@ -9,10 +9,10 @@ export default function mapCurrentForecast(
   const data = apiData[0];
   const weatherDescription = data.WeatherText;
   const temperature = data.Temperature.Metric.Value;
-  const time = data.LocalObservationDateTime;
+  const time = new Date(data.LocalObservationDateTime).toDateString();
   const icon = data.WeatherIcon;
   const realTemperature = data.RealFeelTemperature.Metric.Value;
-  const humidity = data.RelativeHumidty;
+  const humidity = data.RelativeHumidity;
   const wind = {
     direction: data.Wind.Direction.Degrees,
     speed: data.Wind.Speed.Metric.Value,
