@@ -18,13 +18,6 @@ export interface IUnparsedCurrentForecast {
         Value: number}
       }
   };
-  WindGust: {
-    Speed: { 
-      Metric: {
-        Value: number
-      }
-    }
-  };
   Pressure: {
     Metric: {
       Value: number,
@@ -36,6 +29,14 @@ export interface IParsedCurrentForecast {
   weatherDescription: string;
   temperature: number;
   time: string;
+  icon: number;
+  realTemperature: number;
+  humidity: number;
+  wind: {
+    direction: string,
+    speed: number,
+  };
+  pressure: number;
 }
 
 export interface IUnparsedDailyForecast {
