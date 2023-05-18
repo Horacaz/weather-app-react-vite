@@ -44,14 +44,6 @@ export async function getTwelveHoursForecast(locationKey: string) {
   return result;
 }
 
-export async function getOneDayForecast(locationKey: string) {
-  const url = `https://dataservice.accuweather.com/forecasts/v1/daily/1day/${locationKey}?apikey=${API_KEY}&details=true&metric=true`;
-  const result = await fetch(url)
-    .then((res) => res.json())
-    .then((data) => data);
-  return result;
-}
-
 export async function getFiveDaysForecast(locationKey: string) {
   const url = `https://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationKey}?apikey=${API_KEY}&details=true&metric=true`;
   const result = await fetch(url)

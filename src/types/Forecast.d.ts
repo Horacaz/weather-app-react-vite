@@ -1,9 +1,35 @@
 export interface IUnparsedCurrentForecast {
   WeatherText: string;
+  WeatherIcon: number;
   Temperature: {
     Metric: { Value: number };
   };
   LocalObservationDateTime: string;
+  RealFeelTemperature: {
+    Metric: { Value: number}
+  };
+  RelativeHumidty: number;
+  Wind: {
+    Direction: {
+      Degrees: string;
+    },
+    Speed: { 
+      Metric: {
+        Value: number}
+      }
+  };
+  WindGust: {
+    Speed: { 
+      Metric: {
+        Value: number
+      }
+    }
+  };
+  Pressure: {
+    Metric: {
+      Value: number,
+    }
+  };
 }
 
 export interface IParsedCurrentForecast {
