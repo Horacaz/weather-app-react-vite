@@ -18,8 +18,9 @@ export default function useForecast() {
   const [locationKey, setKey] = useState<string | null>(null);
   const [currentForecast, setCurrentForecast] =
     useState<IParsedCurrentForecast | null>(null);
-  const [extendedForecast, setExtendedForecast] =
-    useState<IParsedDailyForecast[] | null>(null);
+  const [extendedForecast, setExtendedForecast] = useState<
+    IParsedDailyForecast[] | null
+  >(null);
   const [twelveHoursForecast, setTwelveHoursForecast] = useState<
     IParsedTwelveHoursForecast[] | null
   >(null);

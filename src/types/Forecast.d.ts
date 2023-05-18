@@ -6,22 +6,23 @@ export interface IUnparsedCurrentForecast {
   };
   LocalObservationDateTime: string;
   RealFeelTemperature: {
-    Metric: { Value: number}
+    Metric: { Value: number };
   };
   RelativeHumidity: number;
   Wind: {
     Direction: {
       Degrees: number;
-    },
-    Speed: { 
+    };
+    Speed: {
       Metric: {
-        Value: number}
-      }
+        Value: number;
+      };
+    };
   };
   Pressure: {
     Metric: {
-      Value: number,
-    }
+      Value: number;
+    };
   };
 }
 
@@ -33,8 +34,8 @@ export interface IParsedCurrentForecast {
   realTemperature: number;
   humidity: number;
   wind: {
-    direction: number,
-    speed: number,
+    direction: number;
+    speed: number;
   };
   pressure: number;
 }

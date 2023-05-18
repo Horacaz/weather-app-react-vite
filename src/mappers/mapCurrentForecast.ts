@@ -18,5 +18,14 @@ export default function mapCurrentForecast(
     speed: data.Wind.Speed.Metric.Value,
   };
   const pressure = data.Pressure.Metric.Value;
-  return { weatherDescription, time, temperature, icon, realTemperature, humidity, wind, pressure };
+  return {
+    weatherDescription,
+    time,
+    temperature,
+    icon,
+    realTemperature,
+    humidity,
+    wind,
+    pressure,
+  };
 }
