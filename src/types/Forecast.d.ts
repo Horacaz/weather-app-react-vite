@@ -52,6 +52,8 @@ export interface IUnparsedDailyForecast {
       Maximum: { Value: number; Phrase: string };
     };
     Day: {
+      Icon: number;
+      IconPhrase: string;
       LongPhrase: string;
       PrecipitationProbability: number;
       Wind: {
@@ -64,6 +66,8 @@ export interface IUnparsedDailyForecast {
       };
     };
     Night: {
+      Icon: number;
+      IconPhrase: string;
       LongPhrase: string;
       PrecipitationProbability: number;
       Wind: {
@@ -84,6 +88,8 @@ export interface IParsedDailyForecast {
     max: number;
   };
   day: {
+    icon: number;
+    iconDescription: string;
     forecast: string;
     precipitation: number;
     wind: {
@@ -92,6 +98,8 @@ export interface IParsedDailyForecast {
     };
   };
   night: {
+    icon: number;
+    iconDescription: string;
     forecast: string;
     precipitation: number;
     wind: {

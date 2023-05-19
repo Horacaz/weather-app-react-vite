@@ -17,6 +17,8 @@ export default function mapExtendedForecast(
       max: forecast.RealFeelTemperature.Maximum.Value,
     },
     day: {
+      icon: forecast.Day.Icon,
+      iconDescription: forecast.Day.IconPhrase,
       forecast: forecast.Day.LongPhrase,
       precipitation: forecast.Day.PrecipitationProbability,
       wind: {
@@ -25,6 +27,8 @@ export default function mapExtendedForecast(
       },
     },
     night: {
+      icon: forecast.Night.Icon,
+      iconDescription: forecast.Night.IconPhrase,
       forecast: forecast.Night.LongPhrase,
       precipitation: forecast.Night.PrecipitationProbability,
       wind: {
