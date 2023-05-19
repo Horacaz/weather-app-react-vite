@@ -7,7 +7,7 @@ export default function mapExtendedForecast(
   apiData: IUnparsedDailyForecast
 ): IParsedDailyForecast[] {
   const extendedForecast = apiData.DailyForecasts.map((forecast) => ({
-    date: forecast.Date,
+    date: new Date(forecast.Date).toDateString(),
     temperature: {
       min: forecast.Temperature.Minimum.Value,
       max: forecast.Temperature.Maximum.Value,

@@ -7,6 +7,10 @@ export const Container = styled.div`
   padding: 0.5rem;
   text-align: center;
 `;
+
 export const Span = styled.span`
   font-weight: bolder;
 `;
+
+export const Title = styled.h2`
+text-align:center`

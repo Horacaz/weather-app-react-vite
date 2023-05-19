@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
-export const Title = styled.h2`
-text-align: center;
-font-weight: bolder;
-color: green;`
-
 export const Container = styled.div`
-background-color: grey
-font-weight: bolder;
-text-align: center`
+  background-color: black;
+  border-radius: 10px;
+  margin: 1rem;
+  padding: 0.5rem;
+  text-align: center;
+`;
+export const Span = styled.span`
+  font-weight: bolder;
+`;
+
+export const Title = styled.h2`
+text-align:center`
