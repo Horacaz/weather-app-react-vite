@@ -4,9 +4,7 @@ import mapCityLocation from "../mappers/mapCityLocation";
 import { useEffect, useState } from "react";
 export default function useCityLocation() {
   const [loading, setLoading] = useState(false);
-  const [location, setLocation] = useState<IParsedCityLocation | null>(
-    null
-  );
+  const [location, setLocation] = useState<IParsedCityLocation | null>(null);
   const [cityFetch, setCityFetch] = useState("");
   const [locationKey, setLocationKey] = useState("");
 

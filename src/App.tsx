@@ -13,7 +13,6 @@ function App() {
     setQuery(e.target.value);
   const onClickCallBack = () => setCityFetch(query);
 
-  // fetches Forecast
   useEffect(() => {
     if (locationKey) {
       setKey(locationKey);
