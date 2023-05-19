@@ -5,7 +5,7 @@ import useForecast from "./hooks/useForecast";
 import SearchLocation from "./components/SearchLocation/SearchLocation";
 import CurrentForecast from "./components/CurrentForecast/CurrentForecast";
 function App() {
-  const { cityKey, setCityFetch } = useCityLocation();
+  const { locationKey, setCityFetch } = useCityLocation();
   const { currentForecast, setKey } = useForecast();
   const [query, setQuery] = useState("");
 
@@ -15,11 +15,11 @@ function App() {
 
   // fetches Forecast
   useEffect(() => {
-    if (cityKey) {
-      setKey(cityKey);
+    if (locationKey) {
+      setKey(locationKey);
     }
   }),
-    [setKey, cityKey];
+    [setKey, locationKey];
 
   return (
     <>
