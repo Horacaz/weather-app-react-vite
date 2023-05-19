@@ -1,7 +1,7 @@
 [
     {
-        "LocalObservationDateTime": "2023-05-16T11:20:00-03:00",
-        "EpochTime": 1684246800,
+        "LocalObservationDateTime": "2023-05-18T15:20:00-03:00",
+        "EpochTime": 1684434000,
         "WeatherText": "Sunny",
         "WeatherIcon": 1,
         "HasPrecipitation": false,
@@ -9,14 +9,371 @@
         "IsDayTime": true,
         "Temperature": {
             "Metric": {
-                "Value": 20.9,
+                "Value": 23.3,
                 "Unit": "C",
                 "UnitType": 17
             },
             "Imperial": {
-                "Value": 70.0,
+                "Value": 74.0,
                 "Unit": "F",
                 "UnitType": 18
+            }
+        },
+        "RealFeelTemperature": {
+            "Metric": {
+                "Value": 23.1,
+                "Unit": "C",
+                "UnitType": 17,
+                "Phrase": "Pleasant"
+            },
+            "Imperial": {
+                "Value": 74.0,
+                "Unit": "F",
+                "UnitType": 18,
+                "Phrase": "Pleasant"
+            }
+        },
+        "RealFeelTemperatureShade": {
+            "Metric": {
+                "Value": 21.6,
+                "Unit": "C",
+                "UnitType": 17,
+                "Phrase": "Pleasant"
+            },
+            "Imperial": {
+                "Value": 71.0,
+                "Unit": "F",
+                "UnitType": 18,
+                "Phrase": "Pleasant"
+            }
+        },
+        "RelativeHumidity": 48,
+        "IndoorRelativeHumidity": 48,
+        "DewPoint": {
+            "Metric": {
+                "Value": 11.8,
+                "Unit": "C",
+                "UnitType": 17
+            },
+            "Imperial": {
+                "Value": 53.0,
+                "Unit": "F",
+                "UnitType": 18
+            }
+        },
+        "Wind": {
+            "Direction": {
+                "Degrees": 180,
+                "Localized": "S",
+                "English": "S"
+            },
+            "Speed": {
+                "Metric": {
+                    "Value": 13.9,
+                    "Unit": "km/h",
+                    "UnitType": 7
+                },
+                "Imperial": {
+                    "Value": 8.6,
+                    "Unit": "mi/h",
+                    "UnitType": 9
+                }
+            }
+        },
+        "WindGust": {
+            "Speed": {
+                "Metric": {
+                    "Value": 27.8,
+                    "Unit": "km/h",
+                    "UnitType": 7
+                },
+                "Imperial": {
+                    "Value": 17.2,
+                    "Unit": "mi/h",
+                    "UnitType": 9
+                }
+            }
+        },
+        "UVIndex": 2,
+        "UVIndexText": "Low",
+        "Visibility": {
+            "Metric": {
+                "Value": 16.1,
+                "Unit": "km",
+                "UnitType": 6
+            },
+            "Imperial": {
+                "Value": 10.0,
+                "Unit": "mi",
+                "UnitType": 2
+            }
+        },
+        "ObstructionsToVisibility": "",
+        "CloudCover": 0,
+        "Ceiling": {
+            "Metric": {
+                "Value": 9144.0,
+                "Unit": "m",
+                "UnitType": 5
+            },
+            "Imperial": {
+                "Value": 30000.0,
+                "Unit": "ft",
+                "UnitType": 0
+            }
+        },
+        "Pressure": {
+            "Metric": {
+                "Value": 1016.3,
+                "Unit": "mb",
+                "UnitType": 14
+            },
+            "Imperial": {
+                "Value": 30.01,
+                "Unit": "inHg",
+                "UnitType": 12
+            }
+        },
+        "PressureTendency": {
+            "LocalizedText": "Steady",
+            "Code": "S"
+        },
+        "Past24HourTemperatureDeparture": {
+            "Metric": {
+                "Value": -3.3,
+                "Unit": "C",
+                "UnitType": 17
+            },
+            "Imperial": {
+                "Value": -6.0,
+                "Unit": "F",
+                "UnitType": 18
+            }
+        },
+        "ApparentTemperature": {
+            "Metric": {
+                "Value": 23.3,
+                "Unit": "C",
+                "UnitType": 17
+            },
+            "Imperial": {
+                "Value": 74.0,
+                "Unit": "F",
+                "UnitType": 18
+            }
+        },
+        "WindChillTemperature": {
+            "Metric": {
+                "Value": 23.3,
+                "Unit": "C",
+                "UnitType": 17
+            },
+            "Imperial": {
+                "Value": 74.0,
+                "Unit": "F",
+                "UnitType": 18
+            }
+        },
+        "WetBulbTemperature": {
+            "Metric": {
+                "Value": 16.2,
+                "Unit": "C",
+                "UnitType": 17
+            },
+            "Imperial": {
+                "Value": 61.0,
+                "Unit": "F",
+                "UnitType": 18
+            }
+        },
+        "Precip1hr": {
+            "Metric": {
+                "Value": 0.0,
+                "Unit": "mm",
+                "UnitType": 3
+            },
+            "Imperial": {
+                "Value": 0.0,
+                "Unit": "in",
+                "UnitType": 1
+            }
+        },
+        "PrecipitationSummary": {
+            "Precipitation": {
+                "Metric": {
+                    "Value": 0.0,
+                    "Unit": "mm",
+                    "UnitType": 3
+                },
+                "Imperial": {
+                    "Value": 0.0,
+                    "Unit": "in",
+                    "UnitType": 1
+                }
+            },
+            "PastHour": {
+                "Metric": {
+                    "Value": 0.0,
+                    "Unit": "mm",
+                    "UnitType": 3
+                },
+                "Imperial": {
+                    "Value": 0.0,
+                    "Unit": "in",
+                    "UnitType": 1
+                }
+            },
+            "Past3Hours": {
+                "Metric": {
+                    "Value": 0.0,
+                    "Unit": "mm",
+                    "UnitType": 3
+                },
+                "Imperial": {
+                    "Value": 0.0,
+                    "Unit": "in",
+                    "UnitType": 1
+                }
+            },
+            "Past6Hours": {
+                "Metric": {
+                    "Value": 0.0,
+                    "Unit": "mm",
+                    "UnitType": 3
+                },
+                "Imperial": {
+                    "Value": 0.0,
+                    "Unit": "in",
+                    "UnitType": 1
+                }
+            },
+            "Past9Hours": {
+                "Metric": {
+                    "Value": 0.0,
+                    "Unit": "mm",
+                    "UnitType": 3
+                },
+                "Imperial": {
+                    "Value": 0.0,
+                    "Unit": "in",
+                    "UnitType": 1
+                }
+            },
+            "Past12Hours": {
+                "Metric": {
+                    "Value": 0.0,
+                    "Unit": "mm",
+                    "UnitType": 3
+                },
+                "Imperial": {
+                    "Value": 0.0,
+                    "Unit": "in",
+                    "UnitType": 1
+                }
+            },
+            "Past18Hours": {
+                "Metric": {
+                    "Value": 0.0,
+                    "Unit": "mm",
+                    "UnitType": 3
+                },
+                "Imperial": {
+                    "Value": 0.0,
+                    "Unit": "in",
+                    "UnitType": 1
+                }
+            },
+            "Past24Hours": {
+                "Metric": {
+                    "Value": 0.0,
+                    "Unit": "mm",
+                    "UnitType": 3
+                },
+                "Imperial": {
+                    "Value": 0.0,
+                    "Unit": "in",
+                    "UnitType": 1
+                }
+            }
+        },
+        "TemperatureSummary": {
+            "Past6HourRange": {
+                "Minimum": {
+                    "Metric": {
+                        "Value": 17.0,
+                        "Unit": "C",
+                        "UnitType": 17
+                    },
+                    "Imperial": {
+                        "Value": 63.0,
+                        "Unit": "F",
+                        "UnitType": 18
+                    }
+                },
+                "Maximum": {
+                    "Metric": {
+                        "Value": 23.3,
+                        "Unit": "C",
+                        "UnitType": 17
+                    },
+                    "Imperial": {
+                        "Value": 74.0,
+                        "Unit": "F",
+                        "UnitType": 18
+                    }
+                }
+            },
+            "Past12HourRange": {
+                "Minimum": {
+                    "Metric": {
+                        "Value": 16.8,
+                        "Unit": "C",
+                        "UnitType": 17
+                    },
+                    "Imperial": {
+                        "Value": 62.0,
+                        "Unit": "F",
+                        "UnitType": 18
+                    }
+                },
+                "Maximum": {
+                    "Metric": {
+                        "Value": 23.3,
+                        "Unit": "C",
+                        "UnitType": 17
+                    },
+                    "Imperial": {
+                        "Value": 74.0,
+                        "Unit": "F",
+                        "UnitType": 18
+                    }
+                }
+            },
+            "Past24HourRange": {
+                "Minimum": {
+                    "Metric": {
+                        "Value": 16.8,
+                        "Unit": "C",
+                        "UnitType": 17
+                    },
+                    "Imperial": {
+                        "Value": 62.0,
+                        "Unit": "F",
+                        "UnitType": 18
+                    }
+                },
+                "Maximum": {
+                    "Metric": {
+                        "Value": 26.6,
+                        "Unit": "C",
+                        "UnitType": 17
+                    },
+                    "Imperial": {
+                        "Value": 80.0,
+                        "Unit": "F",
+                        "UnitType": 18
+                    }
+                }
             }
         },
         "MobileLink": "http://www.accuweather.com/en/ar/santa-fe/11221/current-weather/11221?lang=en-us",

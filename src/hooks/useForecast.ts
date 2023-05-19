@@ -7,12 +7,10 @@ import {
 } from "../types/Forecast";
 import mapCurrentForecast from "../mappers/mapCurrentForecast";
 import mapExtendedForecast from "../mappers/mapExtendedForecast";
-import mapDailyForecast from "../mappers/mapOneDayForecast";
 import mapTwelveHoursForecast from "../mappers/mapTwelveHoursForecast";
 import {
   getCurrentForecast,
   getFiveDaysForecast,
-  getOneDayForecast,
   getTwelveHoursForecast,
 } from "../api/getForecast";
 
@@ -20,10 +18,9 @@ export default function useForecast() {
   const [locationKey, setKey] = useState<string | null>(null);
   const [currentForecast, setCurrentForecast] =
     useState<IParsedCurrentForecast | null>(null);
-  const [extendedForecast, setExtendedForecast] =
-    useState<IParsedDailyForecast[] | null>(null);
-  const [dailyForecast, setDailyForecast] =
-    useState<IParsedDailyForecast | null>(null);
+  const [extendedForecast, setExtendedForecast] = useState<
+    IParsedDailyForecast[] | null
+  >(null);
   const [twelveHoursForecast, setTwelveHoursForecast] = useState<
     IParsedTwelveHoursForecast[] | null
   >(null);
@@ -32,13 +29,11 @@ export default function useForecast() {
       Promise.all([
         getCurrentForecast(locationKey),
         getFiveDaysForecast(locationKey),
-        getOneDayForecast(locationKey),
         getTwelveHoursForecast(locationKey),
       ]).then((values) => {
         setCurrentForecast(mapCurrentForecast(values[0]));
         setExtendedForecast(mapExtendedForecast(values[1]));
-        setDailyForecast(mapDailyForecast(values[2]));
-        setTwelveHoursForecast(mapTwelveHoursForecast(values[3]));
+        setTwelveHoursForecast(mapTwelveHoursForecast(values[2]));
       });
     }
     if (locationKey) {
@@ -48,7 +43,6 @@ export default function useForecast() {
   return {
     currentForecast,
     extendedForecast,
-    dailyForecast,
     twelveHoursForecast,
     setKey,
   };

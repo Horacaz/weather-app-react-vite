@@ -1,41 +1,50 @@
-import {
-  IParsedCurrentForecast,
-  IUnparsedCurrentForecast,
-  IUnparsedDailyForecast,
-  IParsedDailyForecast,
-  IParsedTwelveHoursForecast,
-  IUnparsedTwelveHoursForecast,
-} from "../../types/Forecast";
-
-import { describe, test } from "vitest";
+import { describe, test, expect, vi, beforeEach } from "vitest";
 import {
   getCurrentForecast,
   getFiveDaysForecast,
-  getOneDayForecast,
   getTwelveHoursForecast,
 } from "../getForecast";
+beforeEach(() => {
+  vi.clearAllMocks();
+});
 
-const locationKey = "1LLLA";
+const fetchMock = (global.fetch = vi.fn().mockImplementation(
+  () =>
+    new Promise((resolve) => {
+      const jsonPromise = new Promise((r) => {
+        r({});
+      });
+      resolve({ json: () => jsonPromise });
+    })
+));
+
+const locationKey = "Foo";
 describe("getCurrentForecast", () => {
-  test("validQuery", () => {
+  test("getCurrentForecast succesfully sends request to API", () => {
+    const expectedUrl =
+      "https://dataservice.accuweather.com/currentconditions/v1/Foo?apikey=GCs4Stk98mbGy2ESMGZ5naQMcAcABC3X&details=true";
     getCurrentForecast(locationKey);
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+    expect(fetchMock).toHaveBeenCalledWith(expectedUrl);
   });
 });
 
 describe("getFiveDaysForecast", () => {
-  test("validQuery", () => {
+  test("getFiveDaysForecast succesfully sends request to API", () => {
+    const expectedUrl =
+      "https://dataservice.accuweather.com/forecasts/v1/daily/5day/Foo?apikey=GCs4Stk98mbGy2ESMGZ5naQMcAcABC3X&details=true&metric=true";
     getFiveDaysForecast(locationKey);
-  });
-});
-
-describe("getOneDayForecast", () => {
-  test("validQuery", () => {
-    getOneDayForecast(locationKey);
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+    expect(fetchMock).toHaveBeenCalledWith(expectedUrl);
   });
 });
 
 describe("getTwelveHoursForecast", () => {
-  test("validQuery", () => {
+  test("getTwelveHoursForecast succesfully sends request to API", () => {
+    const expectedUrl =
+      "https://dataservice.accuweather.com/forecasts/v1/hourly/12hour/Foo?apikey=GCs4Stk98mbGy2ESMGZ5naQMcAcABC3X&details=true&metric=true";
     getTwelveHoursForecast(locationKey);
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+    expect(fetchMock).toHaveBeenCalledWith(expectedUrl);
   });
 });

@@ -4,16 +4,16 @@ import mapCityLocation from "../mappers/mapCityLocation";
 import { useEffect, useState } from "react";
 export default function useCityLocation() {
   const [loading, setLoading] = useState(false);
-  const [cityLocation, setCityLocation] = useState<IParsedCityLocation | null>(null);
+  const [location, setLocation] = useState<IParsedCityLocation | null>(null);
   const [cityFetch, setCityFetch] = useState("");
-  const [cityKey, setCityKey] = useState("");
-  
+  const [locationKey, setLocationKey] = useState("");
+
   useEffect(() => {
     async function fetchCity() {
       const cityKey = await getCityKey(cityFetch);
       const mappedCity = mapCityLocation(cityKey);
-      setCityLocation(mappedCity);
-      setCityKey(mappedCity.key);
+      setLocation(mappedCity);
+      setLocationKey(mappedCity.key);
       setLoading(false);
     }
     if (cityFetch) {
@@ -22,5 +22,5 @@ export default function useCityLocation() {
     }
   }, [cityFetch]);
 
-  return { loading, cityLocation, cityKey, setCityFetch };
+  return { loading, location, locationKey, setCityFetch };
 }
