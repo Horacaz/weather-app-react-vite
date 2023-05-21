@@ -25,7 +25,7 @@ export const Divider = styled.div`
 
 export const SmallDivider = styled.div`
   display: flex;
-  align-items:center;
+  align-items: center;
 `;
 
 export const Text = styled.p`

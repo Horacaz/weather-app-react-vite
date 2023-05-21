@@ -5,6 +5,8 @@ import {
   Text,
   Image,
   TemperatureContainer,
+  MaxTemperature,
+  MinTemperature,
 } from "./styles";
 export default function ExtendedForecast({
   extendedForecast,
@@ -30,9 +32,9 @@ function ForecastCard(forecast: IParsedDailyForecast) {
         <Image src={forecast.day.icon} />
         <Text>{forecast.day.iconDescription}</Text>
         <TemperatureContainer>
-          <Image src={forecast.icon.temperature} />
+          <MinTemperature src={forecast.icon.temperature} />
           <Text>{forecast.temperature.min}°</Text>
-          <Image src={forecast.icon.temperature} />
+          <MaxTemperature src={forecast.icon.temperature} />
           <Text>{forecast.temperature.max}°</Text>
         </TemperatureContainer>
       </Card>
