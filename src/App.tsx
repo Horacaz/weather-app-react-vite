@@ -26,7 +26,9 @@ function App() {
       <h1>Weather in your Location</h1>
       <SearchLocation onChange={onChangeCallBack} onClick={onClickCallBack} />
       {currentForecast && <CurrentForecast {...currentForecast} />}
-      {extendedForecast && <ExtendedForecast extendedForecast = {extendedForecast} />}
+      {extendedForecast && (
+        <ExtendedForecast extendedForecast={extendedForecast} />
+      )}
     </>
   );
 }

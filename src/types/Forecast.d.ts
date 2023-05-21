@@ -30,7 +30,7 @@ export interface IParsedCurrentForecast {
   weatherDescription: string;
   temperature: number;
   time: string;
-  icon: number;
+  icon: string;
   realTemperature: number;
   humidity: number;
   wind: {
@@ -88,7 +88,7 @@ export interface IParsedDailyForecast {
     max: number;
   };
   day: {
-    icon: number;
+    icon: string;
     iconDescription: string;
     forecast: string;
     precipitation: number;

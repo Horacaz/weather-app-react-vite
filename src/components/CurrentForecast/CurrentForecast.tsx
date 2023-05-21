@@ -1,9 +1,9 @@
 import { IParsedCurrentForecast } from "../../types/Forecast";
-import { Title, Container, Span } from "./styles";
+import { Title, Container, Span, Image } from "./styles";
 export default function CurrentForecast(props: IParsedCurrentForecast) {
   return (
     <>
-    <Title>Current Forecast</Title>
+      <Title>Current Forecast</Title>
       <Container>
         <p>
           Weather Description: <Span>{props.weatherDescription}</Span>
@@ -20,9 +20,7 @@ export default function CurrentForecast(props: IParsedCurrentForecast) {
         <p>
           Real Feel Temperature: <Span>{props.realTemperature}°c</Span>
         </p>
-        <p>
-          Weather Icon: <Span>{props.icon}</Span>
-        </p>
+        <Image src={props.icon}/>
         <p>
           Wind Direction: <Span>{props.wind.direction}°</Span>
         </p>

@@ -2,6 +2,7 @@ import {
   IUnparsedDailyForecast,
   IParsedDailyForecast,
 } from "../types/Forecast";
+import getForecastImages from "../helpers/getForecastImage";
 
 export default function mapExtendedForecast(
   apiData: IUnparsedDailyForecast
@@ -17,7 +18,7 @@ export default function mapExtendedForecast(
       max: forecast.RealFeelTemperature.Maximum.Value,
     },
     day: {
-      icon: forecast.Day.Icon,
+      icon: getForecastImages(forecast.Day.Icon),
       iconDescription: forecast.Day.IconPhrase,
       forecast: forecast.Day.LongPhrase,
       precipitation: forecast.Day.PrecipitationProbability,
