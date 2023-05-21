@@ -6,9 +6,8 @@ export const Title = styled.h2`
 
 export const Container = styled.div`
   display: flex;
-  align-items: flex-start;
-  justify-content: space-evenly;
-  max-width: 50%;
+  align-items: center;
+  justify-content: space-around;
   flex-direction: row;
   flex-wrap: wrap;
   background-color: black;
