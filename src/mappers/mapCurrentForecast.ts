@@ -2,6 +2,7 @@ import {
   IUnparsedCurrentForecast,
   IParsedCurrentForecast,
 } from "../types/Forecast";
+import getForecastImages from "../helpers/getForecastImage";
 
 export default function mapCurrentForecast(
   apiData: IUnparsedCurrentForecast[]
@@ -10,7 +11,7 @@ export default function mapCurrentForecast(
   const weatherDescription = data.WeatherText;
   const temperature = data.Temperature.Metric.Value;
   const time = new Date(data.LocalObservationDateTime).toDateString();
-  const icon = data.WeatherIcon;
+  const icon = getForecastImages(data.WeatherIcon);
   const realTemperature = data.RealFeelTemperature.Metric.Value;
   const humidity = data.RelativeHumidity;
   const wind = {

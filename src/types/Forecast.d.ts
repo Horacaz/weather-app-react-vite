@@ -30,7 +30,7 @@ export interface IParsedCurrentForecast {
   weatherDescription: string;
   temperature: number;
   time: string;
-  icon: number;
+  icon: string;
   realTemperature: number;
   humidity: number;
   wind: {
@@ -52,6 +52,8 @@ export interface IUnparsedDailyForecast {
       Maximum: { Value: number; Phrase: string };
     };
     Day: {
+      Icon: number;
+      IconPhrase: string;
       LongPhrase: string;
       PrecipitationProbability: number;
       Wind: {
@@ -64,6 +66,8 @@ export interface IUnparsedDailyForecast {
       };
     };
     Night: {
+      Icon: number;
+      IconPhrase: string;
       LongPhrase: string;
       PrecipitationProbability: number;
       Wind: {
@@ -75,6 +79,11 @@ export interface IUnparsedDailyForecast {
 }
 export interface IParsedDailyForecast {
   date: string;
+  icon: {
+    temperature: string;
+    precipitation: string;
+    wind: string;
+  };
   temperature: {
     min: number;
     max: number;
@@ -84,6 +93,8 @@ export interface IParsedDailyForecast {
     max: number;
   };
   day: {
+    icon: string;
+    iconDescription: string;
     forecast: string;
     precipitation: number;
     wind: {
@@ -92,6 +103,8 @@ export interface IParsedDailyForecast {
     };
   };
   night: {
+    icon: number;
+    iconDescription: string;
     forecast: string;
     precipitation: number;
     wind: {
