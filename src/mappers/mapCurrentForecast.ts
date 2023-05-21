@@ -15,10 +15,14 @@ export default function mapCurrentForecast(
   const realTemperature = data.RealFeelTemperature.Metric.Value;
   const humidity = data.RelativeHumidity;
   const wind = {
-    direction: data.Wind.Direction.Degrees,
+    direction: data.Wind.Direction.English,
     speed: data.Wind.Speed.Metric.Value,
   };
   const pressure = data.Pressure.Metric.Value;
+  const temperatureIcon = getForecastImages("temperature");
+  const windIcon = getForecastImages("wind");
+  const precipitationIcon = getForecastImages("precipitation");
+  const pressureIcon = getForecastImages("pressure");
   return {
     weatherDescription,
     time,
@@ -28,5 +32,9 @@ export default function mapCurrentForecast(
     humidity,
     wind,
     pressure,
+    temperatureIcon,
+    windIcon,
+    precipitationIcon,
+    pressureIcon,
   };
 }

@@ -44,6 +44,7 @@ import magnifier from "../assets/magnifier.svg";
 import precipitation from "../assets/precipitation.svg";
 import temperature from "../assets/temperature.svg";
 import wind from "../assets/wind.svg";
+import pressure from "../assets/pressure.svg";
 
 interface forecastImages {
   [key: string]: string;
@@ -95,6 +96,7 @@ const forecastImages: forecastImages = {
   precipitation: precipitation,
   temperature: temperature,
   wind: wind,
+  pressure: pressure,
 };
 export default function getForecastImages(code: string | number): string {
   const image = forecastImages[code];
