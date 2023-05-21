@@ -13,7 +13,8 @@ export const Container = styled.div`
   flex-wrap: wrap;
   background-color: black;
   border-radius: 10px;
-  margin: auto;
+  margin: 1rem;
+  padding: 1rem;
   text-align: center;
 `;
 

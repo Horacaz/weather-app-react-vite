@@ -11,7 +11,6 @@ import {
 export default function CurrentForecast(props: IParsedCurrentForecast) {
   return (
     <>
-      <Title>Current Forecast</Title>
       <Container>
         <Divider>
           <Title>{props.weatherDescription}</Title>

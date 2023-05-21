@@ -1,7 +1,6 @@
 import { IParsedDailyForecast } from "../../types/Forecast";
 import {
   Container,
-  Title,
   Card,
   Text,
   Image,
@@ -14,7 +13,6 @@ export default function ExtendedForecast({
 }) {
   return (
     <>
-      <Title>Extended Forecast</Title>
       <Container>
         {extendedForecast.map((forecast, i) => (
           <ForecastCard key={i} {...forecast} />
