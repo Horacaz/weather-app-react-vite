@@ -22,4 +22,5 @@ export const Title = styled.h2`
 `;
 
 export const Image = styled.img`
-max-width: 45px`
+  max-width: 45px;
+`;

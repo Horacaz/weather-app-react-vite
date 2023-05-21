@@ -79,6 +79,11 @@ export interface IUnparsedDailyForecast {
 }
 export interface IParsedDailyForecast {
   date: string;
+  icon: {
+    temperature: string;
+    precipitation: string;
+    wind: string;
+  };
   temperature: {
     min: number;
     max: number;

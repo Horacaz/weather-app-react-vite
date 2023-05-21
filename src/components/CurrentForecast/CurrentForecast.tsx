@@ -20,7 +20,7 @@ export default function CurrentForecast(props: IParsedCurrentForecast) {
         <p>
           Real Feel Temperature: <Span>{props.realTemperature}°c</Span>
         </p>
-        <Image src={props.icon}/>
+        <Image src={props.icon} />
         <p>
           Wind Direction: <Span>{props.wind.direction}°</Span>
         </p>

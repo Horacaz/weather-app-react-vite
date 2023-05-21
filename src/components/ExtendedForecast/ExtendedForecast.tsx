@@ -1,5 +1,5 @@
 import { IParsedDailyForecast } from "../../types/Forecast";
-import { Container, Title, Card, Span, Image } from "./styles";
+import { Container, Title, Card, Text, Image, TemperatureContainer } from "./styles";
 export default function ExtendedForecast({
   extendedForecast,
 }: {
@@ -21,19 +21,15 @@ function ForecastCard(forecast: IParsedDailyForecast) {
   return (
     <>
       <Card>
-        <p>
-          Date: <Span>{forecast.date}</Span>
-        </p>
+        <Text>{forecast.date}</Text>
         <Image src={forecast.day.icon} />
-        <p>
-          Icon Description: <Span>{forecast.day.iconDescription}</Span>
-        </p>
-        <p>
-          Min Temperature: <Span>{forecast.temperature.min}</Span>
-        </p>
-        <p>
-          Max Temperature: <Span>{forecast.temperature.max}</Span>
-        </p>
+        <Text>{forecast.day.iconDescription}</Text>
+        <TemperatureContainer>
+          <Image src={forecast.icon.temperature} />
+          <Text>{forecast.temperature.min}°</Text>
+          <Image src={forecast.icon.temperature} />
+          <Text>{forecast.temperature.max}°</Text>
+        </TemperatureContainer>
       </Card>
     </>
   );

@@ -17,12 +17,17 @@ export const Card = styled.div`
 `;
 
 export const Image = styled.img`
-max-width: 45px`
+  max-width: 45px;
+`;
 
-export const Span = styled.span`
+export const Text = styled.p`
   font-weight: bolder;
 `;
 
 export const Title = styled.h2`
   text-align: center;
 `;
+
+  export const TemperatureContainer = styled.div`
+  display: flex;
+  `

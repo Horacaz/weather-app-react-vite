@@ -46,7 +46,7 @@ import temperature from "../assets/temperature.svg";
 import wind from "../assets/wind.svg";
 
 interface forecastImages {
-    [key: string]: string
+  [key: string]: string;
 }
 const forecastImages: forecastImages = {
   1: Day1,
@@ -91,12 +91,12 @@ const forecastImages: forecastImages = {
   42: Night42,
   43: Night43,
   44: Night44,
-  "magnifier" : magnifier,
-  "precipitation" : precipitation,
-  "temperature" : temperature,
-  "wind": wind,
+  magnifier: magnifier,
+  precipitation: precipitation,
+  temperature: temperature,
+  wind: wind,
 };
 export default function getForecastImages(code: string | number): string {
-    const image = forecastImages[code]
- return image;
+  const image = forecastImages[code];
+  return image;
 }

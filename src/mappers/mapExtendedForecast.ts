@@ -7,8 +7,17 @@ import getForecastImages from "../helpers/getForecastImage";
 export default function mapExtendedForecast(
   apiData: IUnparsedDailyForecast
 ): IParsedDailyForecast[] {
+  const temperatureIcon = getForecastImages("temperature");
+  const windIcon = getForecastImages("wind");
+  const precitipationIcon = getForecastImages("precipitation");
+  
   const extendedForecast = apiData.DailyForecasts.map((forecast) => ({
-    date: new Date(forecast.Date).toDateString(),
+    date: new Date(forecast.Date).toLocaleDateString('en-us', {weekday: 'long', month: 'long', day: 'numeric'}),
+    icon: {
+      temperature: temperatureIcon,
+      wind: windIcon,
+      precipitation: precitipationIcon,
+    },
     temperature: {
       min: forecast.Temperature.Minimum.Value,
       max: forecast.Temperature.Maximum.Value,
