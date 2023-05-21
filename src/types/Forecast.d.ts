@@ -11,7 +11,7 @@ export interface IUnparsedCurrentForecast {
   RelativeHumidity: number;
   Wind: {
     Direction: {
-      Degrees: number;
+      English: string;
     };
     Speed: {
       Metric: {
@@ -34,10 +34,14 @@ export interface IParsedCurrentForecast {
   realTemperature: number;
   humidity: number;
   wind: {
-    direction: number;
+    direction: string;
     speed: number;
   };
   pressure: number;
+  temperatureIcon: string;
+  windIcon: string;
+  precipitationIcon: string;
+  pressureIcon: string;
 }
 
 export interface IUnparsedDailyForecast {

@@ -10,9 +10,13 @@ export default function mapExtendedForecast(
   const temperatureIcon = getForecastImages("temperature");
   const windIcon = getForecastImages("wind");
   const precitipationIcon = getForecastImages("precipitation");
-  
+
   const extendedForecast = apiData.DailyForecasts.map((forecast) => ({
-    date: new Date(forecast.Date).toLocaleDateString('en-us', {weekday: 'long', month: 'long', day: 'numeric'}),
+    date: new Date(forecast.Date).toLocaleDateString("en-us", {
+      weekday: "long",
+      month: "long",
+      day: "numeric",
+    }),
     icon: {
       temperature: temperatureIcon,
       wind: windIcon,

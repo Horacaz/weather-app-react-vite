@@ -28,6 +28,6 @@ export const Title = styled.h2`
   text-align: center;
 `;
 
-  export const TemperatureContainer = styled.div`
+export const TemperatureContainer = styled.div`
   display: flex;
-  `
+`;
