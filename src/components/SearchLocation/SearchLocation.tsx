@@ -1,14 +1,20 @@
-import { SearchInput, Label, Button, Container } from "./styles";
+import { SearchInput, Label, Container, SearchButton} from "./styles";
+import getForecastImages from "../../helpers/getForecastImage";
 
-export default function SearchLocation(props) {
+type EventHandlers = {
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void,
+  onClick: () => void,
+}
+export default function SearchLocation(props: EventHandlers) {
+  const searchIcon = getForecastImages("magnifier");
   const { onChange, onClick } = props;
   return (
     <Container>
+      <SearchButton src={searchIcon} onClick={onClick} />
       <Label>
-        Search Location
-        <SearchInput onChange={onChange} />
+        <SearchInput onChange={onChange}>
+        </SearchInput>
       </Label>
-      <Button onClick={onClick}> Fetch City</Button>
     </Container>
   );
 }
