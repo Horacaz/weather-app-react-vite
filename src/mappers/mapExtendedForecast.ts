@@ -41,7 +41,7 @@ export default function mapExtendedForecast(
       },
     },
     night: {
-      icon: forecast.Night.Icon,
+      icon:  getForecastImages(forecast.Night.Icon),
       iconDescription: forecast.Night.IconPhrase,
       forecast: forecast.Night.LongPhrase,
       precipitation: forecast.Night.PrecipitationProbability,
