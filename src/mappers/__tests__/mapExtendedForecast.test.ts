@@ -6,9 +6,14 @@ import mapExtendedForecast from "../mapExtendedForecast";
 const extendedForecastFixture = extendedForecastMock;
 const expectedExtendedForecast: IParsedDailyForecast[] = [
   {
-    date: "2023-05-16T07:00:00-03:00",
+    date: 'Tuesday, May 16',
+    icon: {
+      precipitation: '/weather-app-react-vite/src/assets/precipitation.svg',
+      temperature: '/weather-app-react-vite/src/assets/temperature.svg',
+      wind: '/weather-app-react-vite/src/assets/wind.svg',
+    },
     day: {
-      icon: 2,
+      icon: '/weather-app-react-vite/src/assets/2.svg',
       iconDescription: "Mostly sunny",
       forecast: "Mostly sunny and very warm",
       precipitation: 0,
@@ -18,7 +23,7 @@ const expectedExtendedForecast: IParsedDailyForecast[] = [
       },
     },
     night: {
-      icon: 35,
+      icon: '/weather-app-react-vite/src/assets/35.svg',
       iconDescription: "Partly cloudy",
       forecast: "Patchy clouds",
       precipitation: 0,
@@ -39,7 +44,7 @@ const expectedExtendedForecast: IParsedDailyForecast[] = [
 ];
 
 describe("mapExtendedForecast", () => {
-  test("Returns a ParsedExtendedForecast object when valid parameters are passed on", () => {
+  test("Returns an IParsedExtendedForecast object when provided with valid parameters", () => {
     expect(mapExtendedForecast(extendedForecastFixture)).toEqual(
       expectedExtendedForecast
     );

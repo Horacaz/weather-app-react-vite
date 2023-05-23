@@ -107,7 +107,7 @@ export interface IParsedDailyForecast {
     };
   };
   night: {
-    icon: number;
+    icon: string;
     iconDescription: string;
     forecast: string;
     precipitation: number;
