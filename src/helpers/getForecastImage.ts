@@ -49,6 +49,7 @@ import pressure from "../assets/pressure.svg";
 interface forecastImages {
   [key: string]: string;
 }
+
 const forecastImages: forecastImages = {
   1: Day1,
   2: Day2,
