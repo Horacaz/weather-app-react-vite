@@ -79,7 +79,7 @@ const expectTwelveHoursForecast: IParsedTwelveHoursForecast[] = [
   },
 ];
 describe("mapExtendedForecast", () => {
-  test("Returns a ParsedTwelveHoursForecast object when valid parameters are passed on", () => {
+  test("Returns an IParsedTwelveHoursForecast object when valid parameters are passed on", () => {
     expect(mapTwelveHoursForecast(twelveHoursForecastFixture)).toEqual(
       expectTwelveHoursForecast
     );

@@ -10,7 +10,7 @@ const expectedOutput: IParsedCityLocation = {
   administrativeArea: "Santa Fe",
 };
 describe("mapCityLocation", () => {
-  test("Returns a ParsedCityLocation object when valid parameters are passed on", () => {
+  test("Returns an IParsedCityLocation object when valid parameters are passed on", () => {
     expect(mapCityLocation(cityLocationFixture)).toEqual(expectedOutput);
   });
 });

@@ -44,7 +44,7 @@ const expectedExtendedForecast: IParsedDailyForecast[] = [
 ];
 
 describe("mapExtendedForecast", () => {
-  test("Returns a IParsedExtendedForecast object when provided with valid parameters", () => {
+  test("Returns an IParsedExtendedForecast object when provided with valid parameters", () => {
     expect(mapExtendedForecast(extendedForecastFixture)).toEqual(
       expectedExtendedForecast
     );
