@@ -10,7 +10,6 @@ import {
   Icon,
 } from "./styles";
 export default function CurrentForecast(props: {forecast: IParsedCurrentForecast, location: IParsedCityLocation}) {
-  console.log(props.location)
   return (
     <>
       <Container>
