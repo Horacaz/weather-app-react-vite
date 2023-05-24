@@ -6,14 +6,14 @@ import mapExtendedForecast from "../mapExtendedForecast";
 const extendedForecastFixture = extendedForecastMock;
 const expectedExtendedForecast: IParsedDailyForecast[] = [
   {
-    date: 'Tuesday, May 16',
+    date: "Tuesday, May 16",
     icon: {
-      precipitation: '/weather-app-react-vite/src/assets/precipitation.svg',
-      temperature: '/weather-app-react-vite/src/assets/temperature.svg',
-      wind: '/weather-app-react-vite/src/assets/wind.svg',
+      precipitation: "/weather-app-react-vite/src/assets/precipitation.svg",
+      temperature: "/weather-app-react-vite/src/assets/temperature.svg",
+      wind: "/weather-app-react-vite/src/assets/wind.svg",
     },
     day: {
-      icon: '/weather-app-react-vite/src/assets/2.svg',
+      icon: "/weather-app-react-vite/src/assets/2.svg",
       iconDescription: "Mostly sunny",
       forecast: "Mostly sunny and very warm",
       precipitation: 0,
@@ -23,7 +23,7 @@ const expectedExtendedForecast: IParsedDailyForecast[] = [
       },
     },
     night: {
-      icon: '/weather-app-react-vite/src/assets/35.svg',
+      icon: "/weather-app-react-vite/src/assets/35.svg",
       iconDescription: "Partly cloudy",
       forecast: "Patchy clouds",
       precipitation: 0,

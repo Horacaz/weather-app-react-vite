@@ -14,7 +14,7 @@ export const Container = styled.div`
 export const Form = styled.form`
   width: 100%;
   display: flex;
-`
+`;
 
 export const SearchInput = styled.input`
   outline: none;
@@ -28,10 +28,11 @@ export const Label = styled.label`
 `;
 
 export const SearchButton = styled.img`
-margin: 0.2rem;
-padding: 0.2rem;
-width: 40px;
-&:hover {
-  filter: invert(4%) sepia(82%) saturate(848%) hue-rotate(215deg) brightness(92%) contrast(87%);
-}
-`
+  margin: 0.2rem;
+  padding: 0.2rem;
+  width: 40px;
+  &:hover {
+    filter: invert(4%) sepia(82%) saturate(848%) hue-rotate(215deg)
+      brightness(92%) contrast(87%);
+  }
+`;
