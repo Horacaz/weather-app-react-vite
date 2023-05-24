@@ -11,6 +11,10 @@ export const Container = styled.div`
   padding: 0.5rem;
   text-align: center;
 `;
+export const Form = styled.form`
+  width: 100%;
+  display: flex;
+`
 
 export const SearchInput = styled.input`
   outline: none;
