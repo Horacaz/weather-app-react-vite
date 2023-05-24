@@ -9,7 +9,10 @@ import {
   SmallDivider,
   Icon,
 } from "./styles";
-export default function CurrentForecast(props: {forecast: IParsedCurrentForecast, location: IParsedCityLocation}) {
+export default function CurrentForecast(props: {
+  forecast: IParsedCurrentForecast;
+  location: IParsedCityLocation;
+}) {
   return (
     <>
       <Container>
@@ -20,7 +23,9 @@ export default function CurrentForecast(props: {forecast: IParsedCurrentForecast
         </Divider>
         <Divider>
           <SmallDivider>
-            <Title>{props.location.administrativeArea} {props.forecast.time}</Title>
+            <Title>
+              {props.location.administrativeArea} {props.forecast.time}
+            </Title>
           </SmallDivider>
           <SmallDivider>
             <Icon src={props.forecast.temperatureIcon} />

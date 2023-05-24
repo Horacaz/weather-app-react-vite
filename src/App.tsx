@@ -25,7 +25,9 @@ function App() {
     <>
       <h1>Weather in your Location</h1>
       <SearchLocation onChange={onChangeCallBack} onClick={onClickCallBack} />
-      {(currentForecast && location) && <CurrentForecast forecast={currentForecast} location={location}/>}
+      {currentForecast && location && (
+        <CurrentForecast forecast={currentForecast} location={location} />
+      )}
       {extendedForecast && (
         <ExtendedForecast extendedForecast={extendedForecast} />
       )}
