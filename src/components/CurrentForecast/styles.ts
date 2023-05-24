@@ -12,7 +12,7 @@ export const Container = styled.div`
   flex-wrap: wrap;
   background-color: black;
   border-radius: 10px;
-  margin: 1rem;
+  margin-top: 1rem;
   padding: 1rem;
   text-align: center;
 `;

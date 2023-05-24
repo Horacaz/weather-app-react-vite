@@ -1,14 +1,27 @@
-import { SearchInput, Label, Button, Container } from "./styles";
+import { SearchInput, Label, Container, SearchButton, Form} from "./styles";
+import getForecastImages from "../../helpers/getForecastImage";
+import { FormEvent } from "react";
 
-export default function SearchLocation(props) {
+type EventHandlers = {
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void,
+  onClick: () => void,
+}
+export default function SearchLocation(props: EventHandlers) {
+  const searchIcon = getForecastImages("magnifier");
+  const onSubmitHandler = (e: FormEvent) => {
+    e.preventDefault();
+    onClick();
+  }
   const { onChange, onClick } = props;
   return (
     <Container>
-      <Label>
-        Search Location
-        <SearchInput onChange={onChange} />
-      </Label>
-      <Button onClick={onClick}> Fetch City</Button>
+      <Form onSubmit={onSubmitHandler}>
+        <SearchButton src={searchIcon} onClick={onClick} />
+        <Label>
+          <SearchInput onChange={onChange}>
+          </SearchInput>
+        </Label>
+      </Form>
     </Container>
   );
 }
