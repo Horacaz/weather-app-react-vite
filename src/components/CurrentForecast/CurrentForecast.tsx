@@ -1,4 +1,5 @@
 import { IParsedCurrentForecast } from "../../types/Forecast";
+import { IParsedCityLocation } from "../../types/cityKey";
 import {
   Title,
   Container,
@@ -8,35 +9,36 @@ import {
   SmallDivider,
   Icon,
 } from "./styles";
-export default function CurrentForecast(props: IParsedCurrentForecast) {
+export default function CurrentForecast(props: {forecast: IParsedCurrentForecast, location: IParsedCityLocation}) {
+  console.log(props.location)
   return (
     <>
       <Container>
         <Divider>
-          <Title>{props.weatherDescription}</Title>
-          <Image src={props.icon} />
-          <Title>{props.temperature}°c</Title>
+          <Title>{props.forecast.weatherDescription}</Title>
+          <Image src={props.forecast.icon} />
+          <Title>{props.forecast.temperature}°c</Title>
         </Divider>
         <Divider>
           <SmallDivider>
-            <Title>{props.time}</Title>
+            <Title>{props.location.administrativeArea} {props.forecast.time}</Title>
           </SmallDivider>
           <SmallDivider>
-            <Icon src={props.temperatureIcon} />
-            <Span>Feels like: {props.realTemperature}°c</Span>
+            <Icon src={props.forecast.temperatureIcon} />
+            <Span>Feels like: {props.forecast.realTemperature}°c</Span>
           </SmallDivider>
           <SmallDivider>
-            <Icon src={props.precipitationIcon} />
-            <Span>Humidity: {props.humidity}%</Span>
+            <Icon src={props.forecast.precipitationIcon} />
+            <Span>Humidity: {props.forecast.humidity}%</Span>
           </SmallDivider>
           <SmallDivider>
-            <Icon src={props.pressureIcon} />
-            <Span>Pressure: {props.pressure}mb</Span>
+            <Icon src={props.forecast.pressureIcon} />
+            <Span>Pressure: {props.forecast.pressure}mb</Span>
           </SmallDivider>
           <SmallDivider>
-            <Icon src={props.windIcon} />
+            <Icon src={props.forecast.windIcon} />
             <Span>
-              {props.wind.direction} {props.wind.speed}km/h
+              {props.forecast.wind.direction} {props.forecast.wind.speed}km/h
             </Span>
           </SmallDivider>
         </Divider>

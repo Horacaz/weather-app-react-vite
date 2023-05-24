@@ -1,9 +1,10 @@
 import { IParsedCurrentForecast } from "../../../types/Forecast";
+import { IParsedCityLocation } from "../../../types/cityKey";
 import { test, describe } from "vitest";
 import {render, screen} from '@testing-library/react'
 import CurrentForecast from "../CurrentForecast";
 
-const props: IParsedCurrentForecast = {
+const forecast: IParsedCurrentForecast = {
     "weatherDescription": "Cloudy",
     "time": "Wed May 24 2023",
     "temperature": 21.2,
@@ -19,11 +20,18 @@ const props: IParsedCurrentForecast = {
     "windIcon": "/weather-app-react-vite/src/assets/wind.svg",
     "precipitationIcon": "/weather-app-react-vite/src/assets/precipitation.svg",
     "pressureIcon": "/weather-app-react-vite/src/assets/pressure.svg"
+};
+
+const location: IParsedCityLocation = {
+        "key": "1-11221_1_AL",
+        "country": "Argentina",
+        "administrativeArea": "Santa Fe"
 }
 
 describe("CurrentForecast", () => {
     test("should render current forecast when provided with valid props", () => {
-        render(<CurrentForecast {...props}/>)
+        render(<CurrentForecast forecast={forecast} location={location}/>)
+        screen.findByText("Santa Fe");
         screen.findByText("Cloudy");
         screen.findByText("Wed May 24 2023");
         screen.findByText("Feels like: 20.5°c");

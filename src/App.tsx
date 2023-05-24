@@ -6,7 +6,7 @@ import SearchLocation from "./components/SearchLocation/SearchLocation";
 import CurrentForecast from "./components/CurrentForecast/CurrentForecast";
 import ExtendedForecast from "./components/ExtendedForecast/ExtendedForecast";
 function App() {
-  const { locationKey, setCityFetch } = useCityLocation();
+  const { location, locationKey, setCityFetch } = useCityLocation();
   const { currentForecast, extendedForecast, setKey } = useForecast();
   const [query, setQuery] = useState("");
 
@@ -25,7 +25,7 @@ function App() {
     <>
       <h1>Weather in your Location</h1>
       <SearchLocation onChange={onChangeCallBack} onClick={onClickCallBack} />
-      {currentForecast && <CurrentForecast {...currentForecast} />}
+      {(currentForecast && location) && <CurrentForecast forecast={currentForecast} location={location}/>}
       {extendedForecast && (
         <ExtendedForecast extendedForecast={extendedForecast} />
       )}
