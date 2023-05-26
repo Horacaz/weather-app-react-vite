@@ -6,10 +6,8 @@ export const Title = styled.h2`
 
 export const Container = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-around;
-  flex-direction: row;
-  flex-wrap: wrap;
   background-color: black;
   border-radius: 10px;
   margin-top: 1rem;
@@ -17,14 +15,19 @@ export const Container = styled.div`
   text-align: center;
 `;
 
+export const Forecast = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
 export const Divider = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 `;
 
 export const SmallDivider = styled.div`
-  display: flex;
-  align-items: center;
+  margin: 0.5rem;
 `;
 
 export const Text = styled.p`

@@ -32,10 +32,10 @@ function ForecastCard(forecast: IParsedDailyForecast) {
         <Image src={forecast.day.icon} />
         <Text>{forecast.day.iconDescription}</Text>
         <TemperatureContainer>
-          <MinTemperature src={forecast.icon.temperature} />
-          <Text>{forecast.temperature.min}°</Text>
-          <MaxTemperature src={forecast.icon.temperature} />
-          <Text>{forecast.temperature.max}°</Text>
+          <Text>
+            <MinTemperature>{forecast.temperature.min}°</MinTemperature>{" "}
+            <MaxTemperature>{forecast.temperature.max}°</MaxTemperature>
+          </Text>
         </TemperatureContainer>
       </Card>
     </>

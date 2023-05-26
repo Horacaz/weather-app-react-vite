@@ -4,9 +4,10 @@ import {
   Title,
   Container,
   Image,
+  Forecast,
   Divider,
-  Span,
   SmallDivider,
+  Span,
   Icon,
 } from "./styles";
 export default function CurrentForecast(props: {
@@ -14,39 +15,36 @@ export default function CurrentForecast(props: {
   location: IParsedCityLocation;
 }) {
   return (
-    <>
-      <Container>
-        <Divider>
-          <Title>{props.forecast.weatherDescription}</Title>
+    <Container>
+      <Forecast>
+        <SmallDivider>
+          <Title>{props.location.administrativeArea}</Title>
           <Image src={props.forecast.icon} />
-          <Title>{props.forecast.temperature}°c</Title>
-        </Divider>
-        <Divider>
-          <SmallDivider>
-            <Title>
-              {props.location.administrativeArea} {props.forecast.time}
-            </Title>
-          </SmallDivider>
-          <SmallDivider>
-            <Icon src={props.forecast.temperatureIcon} />
-            <Span>Feels like: {props.forecast.realTemperature}°c</Span>
-          </SmallDivider>
-          <SmallDivider>
-            <Icon src={props.forecast.precipitationIcon} />
-            <Span>Humidity: {props.forecast.humidity}%</Span>
-          </SmallDivider>
-          <SmallDivider>
-            <Icon src={props.forecast.pressureIcon} />
-            <Span>Pressure: {props.forecast.pressure}mb</Span>
-          </SmallDivider>
-          <SmallDivider>
-            <Icon src={props.forecast.windIcon} />
-            <Span>
-              {props.forecast.wind.direction} {props.forecast.wind.speed}km/h
-            </Span>
-          </SmallDivider>
-        </Divider>
-      </Container>
-    </>
+          <Title>{props.forecast.weatherDescription}</Title>
+        </SmallDivider>
+        <SmallDivider>
+          <h1>{props.forecast.temperature}°C</h1>
+        </SmallDivider>
+      </Forecast>
+      <Divider>
+        <SmallDivider>
+          <Title>{props.forecast.time}</Title>
+        </SmallDivider>
+        <SmallDivider>
+          <Icon src={props.forecast.temperatureIcon} />
+          <Span>Feels like: {props.forecast.realTemperature}°C</Span>
+        </SmallDivider>
+        <SmallDivider>
+          <Icon src={props.forecast.pressureIcon} />
+          <Span>Pressure: {props.forecast.pressure}mb</Span>
+        </SmallDivider>
+        <SmallDivider>
+          <Icon src={props.forecast.windIcon} />
+          <Span>
+            {props.forecast.wind.direction} {props.forecast.wind.speed}km/h
+          </Span>
+        </SmallDivider>
+      </Divider>
+    </Container>
   );
 }

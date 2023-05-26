@@ -22,16 +22,12 @@ export const Card = styled.div`
 export const Image = styled.img`
   max-width: 75px;
 `;
-export const MaxTemperature = styled.img`
-  max-width: 45px;
-  filter: invert(21%) sepia(97%) saturate(3260%) hue-rotate(355deg)
-    brightness(50%) contrast(80%);
+export const MaxTemperature = styled.span`
+  color: #b70404;
 `;
 
-export const MinTemperature = styled.img`
-  max-width: 45px;
-  filter: invert(75%) sepia(76%) saturate(6133%) hue-rotate(169deg)
-    brightness(50%) contrast(85%);
+export const MinTemperature = styled.span`
+  color: #068da9;
 `;
 
 export const Text = styled.p`
