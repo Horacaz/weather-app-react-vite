@@ -9,16 +9,18 @@ Temperature: {
   Value: 23,
 },
 PrecipitationProbability: 0,
+WeatherIcon: 4,
 }];
 
 const expectTwelveHoursForecast: IParsedTwelveHoursForecast[] = [
   {
-    date: "2023-05-16T12:00:00-03:00",
+    date: "12:00:00 PM",
     precipitation: 0,
     temperature: 23,
     weatherDescription: "Sunny",
     precipitationIcon: '/weather-app-react-vite/src/assets/precipitation.svg',
     temperatureIcon: '/weather-app-react-vite/src/assets/temperature.svg',
+    icon: '/weather-app-react-vite/src/assets/4.svg',
   }
 ];
 describe("mapExtendedForecast", () => {
