@@ -118,6 +118,7 @@ export interface IParsedDailyForecast {
   };
 }
 export interface IUnparsedTwelveHoursForecast {
+  WeatherIcon: number;
   DateTime: string;
   IconPhrase: string;
   Temperature: {
@@ -130,4 +131,7 @@ export interface IParsedTwelveHoursForecast {
   weatherDescription: string;
   temperature: number;
   precipitation: number;
+  temperatureIcon: string;
+  precipitationIcon: string;
+  icon: string;
 }
