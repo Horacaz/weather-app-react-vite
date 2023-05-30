@@ -130,4 +130,6 @@ export interface IParsedTwelveHoursForecast {
   weatherDescription: string;
   temperature: number;
   precipitation: number;
+  temperatureIcon: string;
+  precipitationIcon: string;
 }
