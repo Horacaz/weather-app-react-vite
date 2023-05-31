@@ -11,13 +11,13 @@ export default function mapTwelveHoursForecast(
   apiData: IUnparsedTwelveHoursForecast[]
 ): IParsedTwelveHoursForecast[] {
   const twelveHoursForecast = apiData.map((forecast) => ({
-    date: new Date(forecast.DateTime).toLocaleTimeString('en-US'),
+    date: new Date(forecast.DateTime).toLocaleTimeString("en-US"),
     weatherDescription: forecast.IconPhrase,
     temperature: forecast.Temperature.Value,
     precipitation: forecast.PrecipitationProbability,
     temperatureIcon: temperatureIcon,
     precipitationIcon: precitipationIcon,
-    icon:  getForecastImages(forecast.WeatherIcon),
+    icon: getForecastImages(forecast.WeatherIcon),
   }));
 
   return twelveHoursForecast;
