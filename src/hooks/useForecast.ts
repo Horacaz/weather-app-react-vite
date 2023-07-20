@@ -1,4 +1,3 @@
-// this is going to call api and mappers,
 import { useState, useEffect } from "react";
 import {
   IParsedCurrentForecast,
@@ -8,12 +7,7 @@ import {
 import mapCurrentForecast from "../mappers/mapCurrentForecast";
 import mapExtendedForecast from "../mappers/mapExtendedForecast";
 import mapTwelveHoursForecast from "../mappers/mapTwelveHoursForecast";
-import {
-  getCurrentForecast,
-  getFiveDaysForecast,
-  getTwelveHoursForecast,
-} from "../api/getForecast";
-
+import {getCurrentForecast, getFiveDaysForecast, getTwelveHoursForecast} from "../api/getForecast";
 export default function useForecast() {
   const [locationKey, setKey] = useState<string | null>(null);
   const [currentForecast, setCurrentForecast] =

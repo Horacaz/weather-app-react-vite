@@ -23,7 +23,7 @@ export const Card = styled.div`
   margin: 1rem;
   padding: 1rem;
   text-align: center;
-`;
+ `;
 
 export const ForecastImage = styled.img`
   max-width: 75px;
